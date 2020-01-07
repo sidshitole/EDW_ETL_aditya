@@ -186,7 +186,7 @@
 				<include>org.talend.libraries:log4j-1.2.16</include>
 				<include>org.talend.libraries:mysql-connector-java-5.1.30-bin</include>
 				<include>org.talend.libraries:trove</include>
-				<include>org.example.local_project.code:routines</include>
+				<include>org.example.edw_etl_aditya.code:routines</include>
 			</includes>
 			<!-- without version for talend libraries -->
 			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}
@@ -204,7 +204,7 @@
 		<dependencySet>
 			<outputDirectory>${talend.job.name}</outputDirectory>
 			<includes>
-				<include>org.example.local_project.job:amazon_cross_sale1</include>
+				<include>org.example.edw_etl_aditya.job:amazon_cross_sale1</include>
 			</includes>
 			<outputFileNameMapping>${artifact.build.finalName}.${artifact.extension}</outputFileNameMapping>
 			<useProjectArtifact>true</useProjectArtifact>
