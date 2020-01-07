@@ -129,13 +129,13 @@
   <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
-    <elementParameter field="TEXT" name="HOST" value="context.Host"/>
+    <elementParameter field="TEXT" name="HOST" value="context.SH_RR_Host"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.Database"/>
+    <elementParameter field="TEXT" name="PORT" value="context.SH_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.SH_Database"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="context.Username"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufqm00cCzjF7T9AKOTpPmD8"/>
+    <elementParameter field="TEXT" name="USER" value="context.SH_Username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kucRdgb3Dhex57Ka2ZeH0Yhi"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
@@ -148,13 +148,13 @@
   </node>
   <node componentName="tRedshiftConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_2" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.Redhost"/>
+    <elementParameter field="TEXT" name="HOST" value="context.EDW_Host"/>
     <elementParameter field="TEXT" name="TYPE" value="Redshift" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.Redport"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.Reddatabase"/>
+    <elementParameter field="TEXT" name="PORT" value="context.EDW_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.EDW_Database"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="context.Redusername"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufo68G3EaeSGxiDEnDTuQdQ"/>
+    <elementParameter field="TEXT" name="USER" value="context.EDW_Username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufXKlLYlQoLdCL50kFGC/21"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
@@ -167,13 +167,13 @@
   </node>
   <node componentName="tRedshiftConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_3" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="context.Redhost"/>
+    <elementParameter field="TEXT" name="HOST" value="context.EDW_Host"/>
     <elementParameter field="TEXT" name="TYPE" value="Redshift" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="context.Redport"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.Reddatabase"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;tj_dwh_prod&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="context.Redusername"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufo68G3EaeSGxiDEnDTuQdQ"/>
+    <elementParameter field="TEXT" name="PORT" value="context.EDW_Port"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.EDW_Database"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="context_EDW_Schema"/>
+    <elementParameter field="TEXT" name="USER" value="context.EDW_Username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufXKlLYlQoLdCL50kFGC/21"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
@@ -187,7 +187,7 @@
   <node componentName="tRedshiftInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_2" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="TEXT" name="HOST" value="context.Redhost" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="context.Redport" show="false"/>
@@ -196,12 +196,12 @@
     <elementParameter field="TEXT" name="USER" value="context.Redusername" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufo68G3EaeSGxiDEnDTuQdQ" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;process_logs&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;edw_process_logs_impact&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select count(1) as counts from process_logs where process_state = 'Running' and process_name = 'fact_orders_fulfillment_status_updation_by_shipping'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select count(1) as counts from edw_process_logs_impact where job_status = 'Running' and job_name = 'fact_orders_fulfillment_status_updation_by_shipping'&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="redshift_id" show="false"/>
     <elementParameter field="FILE" name="LOG_FILE" value="&quot;/Users/masteradmin/Downloads/TOS_DI-20180411_1414-V7.0.1/workspace/redshift-jdbc.log&quot;" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOG_LEVEL" value="1" show="false"/>
@@ -231,7 +231,7 @@
   <node componentName="tRedshiftRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_2" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5439&quot;" show="false"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
@@ -240,11 +240,11 @@
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;process_logs&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;edw_process_logs_impact&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into process_logs (process_name, start_time, process_state) values ('fact_orders_fulfillment_status_updation_by_shipping',current_timestamp,'Running')&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into edw_process_logs_impact (job_user, job_name, job_start, job_status) values ('aditya','fact_orders_fulfillment_status_updation_by_shipping',current_timestamp,'Running')&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
     <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
@@ -262,7 +262,7 @@
   </node>
   <node componentName="tRedshiftCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBCommit_3" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CHECK" name="CLOSE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBCommit_3"/>
@@ -270,7 +270,7 @@
   <node componentName="tRedshiftInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="928" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_5" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5439&quot;" show="false"/>
@@ -279,12 +279,12 @@
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;process_logs&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;edw_process_logs_impact&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select coalesce(max(last_id),0) as id from process_logs where process_name = 'fact_orders_fulfillment_status_updation_by_shipping' and process_state = 'Completed';&quot;&#xA;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select coalesce(max(last_id),0) as id from edw_process_logs_impact where job_name = 'fact_orders_fulfillment_status_updation_by_shipping' and job_status = 'Completed';&quot;&#xA;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="redshift_id" show="false"/>
     <elementParameter field="FILE" name="LOG_FILE" value="&quot;/Users/masteradmin/Downloads/TOS_DI-20180411_1414-V7.0.1/workspace/redshift-jdbc.log&quot;" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOG_LEVEL" value="1" show="false"/>
@@ -368,7 +368,7 @@
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;order_shipping&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CLEAR"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="redshift_id" show="false"/>
@@ -424,7 +424,7 @@
   <node componentName="tRedshiftRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-96" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_4" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5439&quot;" show="false"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
@@ -433,11 +433,11 @@
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;process_logs&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;edw_process_logs_impact&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;update process_logs&#xA;set process_state = 'Completed', end_time = CURRENT_TIMESTAMP ,&#xA;Last_id = &quot;+context.id+&quot;&#xA;where process_name = 'fact_orders_fulfillment_status_updation_by_shipping' and process_state = 'Running';&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;update edw_process_logs_impact&#xA;set job_status = 'Completed', job_end = CURRENT_TIMESTAMP ,&#xA;last_source_id = &quot;+context.max+&quot;&#xA;where job_name = 'fact_orders_fulfillment_status_updation_by_shipping' and job_status = 'Running';&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
     <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
@@ -499,7 +499,7 @@
   </node>
   <node componentName="tRedshiftCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBCommit_5" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CHECK" name="CLOSE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBCommit_5"/>
@@ -545,7 +545,7 @@
   </node>
   <node componentName="tRedshiftCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="-96" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBCommit_7" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CHECK" name="CLOSE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBCommit_7"/>
@@ -553,7 +553,7 @@
   <node componentName="tRedshiftInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="32" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_9" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="TEXT" name="HOST" value="context.Redhost" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="context.Redport" show="false"/>
@@ -562,12 +562,12 @@
     <elementParameter field="TEXT" name="USER" value="context.Redusername" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufo68G3EaeSGxiDEnDTuQdQ" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;process_logs&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;edw_process_logs_impact&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select count(1) as counts from process_logs where process_state = 'Running' and process_name = 'fact_orders_fulfillment_status_updation_by_ams'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select count(1) as counts from edw_process_logs_impact where job_status = 'Running' and job_name = 'fact_orders_fulfillment_status_updation_by_ams'&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="redshift_id" show="false"/>
     <elementParameter field="FILE" name="LOG_FILE" value="&quot;/Users/masteradmin/Downloads/TOS_DI-20180411_1414-V7.0.1/workspace/redshift-jdbc.log&quot;" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOG_LEVEL" value="1" show="false"/>
@@ -597,7 +597,7 @@
   <node componentName="tRedshiftRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_6" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5439&quot;" show="false"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
@@ -606,11 +606,11 @@
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;process_logs&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;edw_process_logs_impact&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into process_logs (process_name, start_time, process_state) values ('fact_orders_fulfillment_status_updation_by_ams',current_timestamp,'Running')&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into edw_process_logs_impact (job_user, job_name, job_start, job_status) values ('aditya','fact_orders_fulfillment_status_updation_by_ams',current_timestamp,'Running')&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
     <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
@@ -628,14 +628,14 @@
   </node>
   <node componentName="tRedshiftCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBCommit_8" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CHECK" name="CLOSE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBCommit_8"/>
   </node>
   <node componentName="tRedshiftCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBCommit_9" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CHECK" name="CLOSE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBCommit_9"/>
@@ -643,7 +643,7 @@
   <node componentName="tRedshiftRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_7" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5439&quot;" show="false"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
@@ -652,11 +652,11 @@
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;process_logs&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;edw_process_logs_impact&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;update process_logs&#xA;set process_state = 'Completed', end_time = CURRENT_TIMESTAMP,&#xA;Last_id = &quot;+context.idds+&quot;&#xA;where process_name = 'fact_orders_fulfillment_status_updation_by_ams' and process_state = 'Running';&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;update edw_process_logs_impact&#xA;set job_status = 'Completed', job_end = CURRENT_TIMESTAMP,&#xA;last_source_id = &quot;+context.maxid+&quot;&#xA;where job_name = 'fact_orders_fulfillment_status_updation_by_ams' and job_status = 'Running';&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
     <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
@@ -718,7 +718,7 @@
   </node>
   <node componentName="tRedshiftCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="416">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBCommit_10" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="CHECK" name="CLOSE" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBCommit_10"/>
@@ -726,7 +726,7 @@
   <node componentName="tRedshiftInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="288">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_11" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_2"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_3"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;5439&quot;" show="false"/>
@@ -735,12 +735,12 @@
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;process_logs&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;edw_process_logs_impact&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select coalesce(max(last_id),0) as idds from process_logs where process_name = 'fact_orders_fulfillment_status_updation_by_ams' and process_state = 'Completed';&quot;&#xA;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select coalesce(max(last_id),0) as idds from edw_process_logs_impact where job_name = 'fact_orders_fulfillment_status_updation_by_ams' and job_status = 'Completed';&quot;&#xA;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="redshift_id" show="false"/>
     <elementParameter field="FILE" name="LOG_FILE" value="&quot;/Users/masteradmin/Downloads/TOS_DI-20180411_1414-V7.0.1/workspace/redshift-jdbc.log&quot;" show="false"/>
     <elementParameter field="CLOSED_LIST" name="LOG_LEVEL" value="1" show="false"/>
@@ -863,7 +863,7 @@
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;order_ams&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CLEAR"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="redshift_id" show="false"/>
