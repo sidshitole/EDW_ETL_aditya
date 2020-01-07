@@ -13,6 +13,10 @@
     <contextParameter comment="" name="Password" prompt="Password?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;Adi4745@kf!1!41z31@&quot;"/>
     <contextParameter comment="" name="Port" prompt="Port?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;3306&quot;"/>
     <contextParameter comment="" name="Username" prompt="Username?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;aditya&quot;"/>
+    <contextParameter comment="" name="id" prompt="id?" promptNeeded="false" type="id_Long" value=""/>
+    <contextParameter comment="" name="idds" prompt="idds?" promptNeeded="false" type="id_Long" value=""/>
+    <contextParameter comment="" name="max" prompt="max?" promptNeeded="false" type="id_Long" value=""/>
+    <contextParameter comment="" name="maxid" prompt="maxid?" promptNeeded="false" type="id_Long" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="128" show="false"/>
@@ -433,7 +437,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;update process_logs&#xA;set process_state = 'Completed', end_time = CURRENT_TIMESTAMP ,&#xA;Last_id = &quot;+context.max+&quot;&#xA;where process_name = 'fact_orders_fulfillment_status_updation_by_shipping' and process_state = 'Running';&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;update process_logs&#xA;set process_state = 'Completed', end_time = CURRENT_TIMESTAMP ,&#xA;Last_id = &quot;+context.id+&quot;&#xA;where process_name = 'fact_orders_fulfillment_status_updation_by_shipping' and process_state = 'Running';&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
     <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
@@ -652,7 +656,7 @@
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;update process_logs&#xA;set process_state = 'Completed', end_time = CURRENT_TIMESTAMP,&#xA;Last_id = &quot;+context.maxid+&quot;&#xA;where process_name = 'fact_orders_fulfillment_status_updation_by_ams' and process_state = 'Running';&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;update process_logs&#xA;set process_state = 'Completed', end_time = CURRENT_TIMESTAMP,&#xA;Last_id = &quot;+context.idds+&quot;&#xA;where process_name = 'fact_orders_fulfillment_status_updation_by_ams' and process_state = 'Running';&quot;"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
     <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
     <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
