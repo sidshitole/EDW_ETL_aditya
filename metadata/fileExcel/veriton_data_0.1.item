@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:FileExcelConnection xmi:id="_2XphQPFzEemYq66fyBqdRw" name="veriton_data" dataPackage="_2X71IPFzEemYq66fyBqdRw" Server="Localhost 127.0.0.1" FilePath="/Users/masteradmin/Downloads/Veitone Psychographic Original For Database.xlsx" Encoding="UTF-8" UseHeader="true" HeaderValue="1" FirstLineCaption="true" SheetName="Veritone_Psychographic" firstColumn="1" thousandSeparator="','" decimalSeparator="'.'" selectAllSheets="true" sheetList="Veritone_Psychographic:w&#xA;">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+    <sheetColumns>C</sheetColumns>
+    <sheetColumns>D</sheetColumns>
+    <sheetColumns>E</sheetColumns>
+    <sheetColumns>F</sheetColumns>
+    <sheetColumns>G</sheetColumns>
+    <sheetColumns>H</sheetColumns>
+    <sheetColumns>I</sheetColumns>
+    <sheetColumns>J</sheetColumns>
+    <sheetColumns>K</sheetColumns>
+    <sheetColumns>L</sheetColumns>
+    <sheetColumns>M</sheetColumns>
+    <sheetColumns>N</sheetColumns>
+    <sheetColumns>O</sheetColumns>
+    <sheetColumns>P</sheetColumns>
+    <sheetColumns>Q</sheetColumns>
+    <sheetColumns>R</sheetColumns>
+    <sheetColumns>S</sheetColumns>
+    <sheetColumns>T</sheetColumns>
+    <sheetColumns>U</sheetColumns>
+    <sheetColumns>V</sheetColumns>
+    <sheetColumns>W</sheetColumns>
+    <sheetColumns>X</sheetColumns>
+    <sheetColumns>Y</sheetColumns>
+    <sheetColumns>Z</sheetColumns>
+    <sheetColumns>AA</sheetColumns>
+    <sheetColumns>AB</sheetColumns>
+    <sheetColumns>AC</sheetColumns>
+    <sheetColumns>AD</sheetColumns>
+    <sheetColumns>AE</sheetColumns>
+    <sheetColumns>AF</sheetColumns>
+    <sheetColumns>AG</sheetColumns>
+    <sheetColumns>AH</sheetColumns>
+    <sheetColumns>AI</sheetColumns>
+    <sheetColumns>AJ</sheetColumns>
+    <sheetColumns>AK</sheetColumns>
+    <sheetColumns>AL</sheetColumns>
+    <sheetColumns>AM</sheetColumns>
+    <sheetColumns>AN</sheetColumns>
+    <sheetColumns>AO</sheetColumns>
+    <sheetColumns>AP</sheetColumns>
+    <sheetColumns>AQ</sheetColumns>
+    <sheetColumns>AR</sheetColumns>
+    <sheetColumns>AS</sheetColumns>
+    <sheetColumns>AT</sheetColumns>
+    <sheetColumns>AU</sheetColumns>
+    <sheetColumns>AV</sheetColumns>
+    <sheetColumns>AW</sheetColumns>
+    <sheetColumns>AX</sheetColumns>
+    <sheetColumns>AY</sheetColumns>
+    <sheetColumns>AZ</sheetColumns>
+    <sheetColumns>BA</sheetColumns>
+    <sheetColumns>BB</sheetColumns>
+    <sheetColumns>BC</sheetColumns>
+    <sheetColumns>BD</sheetColumns>
+    <sheetColumns>BE</sheetColumns>
+    <sheetColumns>BF</sheetColumns>
+    <sheetColumns>BG</sheetColumns>
+    <sheetColumns>BH</sheetColumns>
+    <sheetColumns>BI</sheetColumns>
+    <sheetColumns>BJ</sheetColumns>
+    <sheetColumns>BK</sheetColumns>
+    <sheetColumns>BL</sheetColumns>
+    <sheetColumns>BM</sheetColumns>
+    <sheetColumns>BN</sheetColumns>
+    <sheetColumns>BO</sheetColumns>
+    <sheetColumns>BP</sheetColumns>
+    <sheetColumns>BQ</sheetColumns>
+    <sheetColumns>BR</sheetColumns>
+    <sheetColumns>BS</sheetColumns>
+    <sheetColumns>BT</sheetColumns>
+    <sheetColumns>BU</sheetColumns>
+    <sheetColumns>BV</sheetColumns>
+    <sheetColumns>BW</sheetColumns>
+    <sheetColumns>BX</sheetColumns>
+    <sheetColumns>BY</sheetColumns>
+    <sheetColumns>BZ</sheetColumns>
+    <sheetColumns>CA</sheetColumns>
+    <sheetColumns>CB</sheetColumns>
+    <sheetColumns>CC</sheetColumns>
+    <sheetColumns>CD</sheetColumns>
+    <sheetColumns>CE</sheetColumns>
+    <sheetColumns>CF</sheetColumns>
+    <sheetColumns>CG</sheetColumns>
+    <sheetColumns>CH</sheetColumns>
+    <sheetColumns>CI</sheetColumns>
+    <sheetColumns>CJ</sheetColumns>
+    <sheetColumns>CK</sheetColumns>
+    <sheetColumns>CL</sheetColumns>
+    <sheetColumns>CM</sheetColumns>
+    <sheetColumns>CN</sheetColumns>
+    <sheetColumns>CO</sheetColumns>
+    <sheetColumns>CP</sheetColumns>
+    <sheetColumns>CQ</sheetColumns>
+    <sheetColumns>CR</sheetColumns>
+    <sheetColumns>CS</sheetColumns>
+    <sheetColumns>CT</sheetColumns>
+    <sheetColumns>CU</sheetColumns>
+    <sheetColumns>CV</sheetColumns>
+    <sheetColumns>CW</sheetColumns>
+    <sheetColumns>CX</sheetColumns>
+    <sheetColumns>CY</sheetColumns>
+    <sheetColumns>CZ</sheetColumns>
+    <sheetColumns>DA</sheetColumns>
+    <sheetColumns>DB</sheetColumns>
+    <sheetColumns>DC</sheetColumns>
+    <sheetColumns>DD</sheetColumns>
+    <sheetColumns>DE</sheetColumns>
+    <sheetColumns>DF</sheetColumns>
+    <sheetColumns>DG</sheetColumns>
+    <sheetColumns>DH</sheetColumns>
+    <sheetColumns>DI</sheetColumns>
+    <sheetColumns>DJ</sheetColumns>
+    <sheetColumns>DK</sheetColumns>
+    <sheetColumns>DL</sheetColumns>
+    <sheetColumns>DM</sheetColumns>
+    <sheetColumns>DN</sheetColumns>
+    <sheetColumns>DO</sheetColumns>
+    <sheetColumns>DP</sheetColumns>
+    <sheetColumns>DQ</sheetColumns>
+    <sheetColumns>DR</sheetColumns>
+    <sheetColumns>DS</sheetColumns>
+    <sheetColumns>DT</sheetColumns>
+    <sheetColumns>DU</sheetColumns>
+    <sheetColumns>DV</sheetColumns>
+    <sheetColumns>DW</sheetColumns>
+    <sheetColumns>DX</sheetColumns>
+    <sheetColumns>DY</sheetColumns>
+    <sheetColumns>DZ</sheetColumns>
+    <sheetColumns>EA</sheetColumns>
+    <sheetColumns>EB</sheetColumns>
+    <sheetColumns>EC</sheetColumns>
+    <sheetColumns>ED</sheetColumns>
+    <sheetColumns>EE</sheetColumns>
+    <sheetColumns>EF</sheetColumns>
+    <sheetColumns>EG</sheetColumns>
+    <sheetColumns>EH</sheetColumns>
+    <sheetColumns>EI</sheetColumns>
+    <sheetColumns>EJ</sheetColumns>
+    <sheetColumns>EK</sheetColumns>
+    <sheetColumns>EL</sheetColumns>
+    <sheetColumns>EM</sheetColumns>
+    <sheetColumns>EN</sheetColumns>
+    <sheetColumns>EO</sheetColumns>
+    <sheetColumns>EP</sheetColumns>
+    <sheetColumns>EQ</sheetColumns>
+    <sheetColumns>ER</sheetColumns>
+    <sheetColumns>ES</sheetColumns>
+    <sheetColumns>ET</sheetColumns>
+    <sheetColumns>EU</sheetColumns>
+    <sheetColumns>EV</sheetColumns>
+    <sheetColumns>EW</sheetColumns>
+    <sheetColumns>EX</sheetColumns>
+    <sheetColumns>EY</sheetColumns>
+    <sheetColumns>EZ</sheetColumns>
+    <sheetColumns>FA</sheetColumns>
+    <sheetColumns>FB</sheetColumns>
+    <sheetColumns>FC</sheetColumns>
+    <sheetColumns>FD</sheetColumns>
+    <sheetColumns>FE</sheetColumns>
+    <sheetColumns>FF</sheetColumns>
+    <sheetColumns>FG</sheetColumns>
+    <sheetColumns>FH</sheetColumns>
+    <sheetColumns>FI</sheetColumns>
+    <sheetColumns>FJ</sheetColumns>
+    <sheetColumns>FK</sheetColumns>
+    <sheetColumns>FL</sheetColumns>
+    <sheetColumns>FM</sheetColumns>
+    <sheetColumns>FN</sheetColumns>
+    <sheetColumns>FO</sheetColumns>
+    <sheetColumns>FP</sheetColumns>
+    <sheetColumns>FQ</sheetColumns>
+    <sheetColumns>FR</sheetColumns>
+    <sheetColumns>FS</sheetColumns>
+    <sheetColumns>FT</sheetColumns>
+    <sheetColumns>FU</sheetColumns>
+    <sheetColumns>FV</sheetColumns>
+    <sheetColumns>FW</sheetColumns>
+    <sheetColumns>FX</sheetColumns>
+    <sheetColumns>FY</sheetColumns>
+    <sheetColumns>FZ</sheetColumns>
+    <sheetColumns>GA</sheetColumns>
+    <sheetColumns>GB</sheetColumns>
+    <sheetColumns>GC</sheetColumns>
+    <sheetColumns>GD</sheetColumns>
+    <sheetColumns>GE</sheetColumns>
+    <sheetColumns>GF</sheetColumns>
+    <sheetColumns>GG</sheetColumns>
+    <sheetColumns>GH</sheetColumns>
+    <sheetColumns>GI</sheetColumns>
+    <sheetColumns>GJ</sheetColumns>
+    <sheetColumns>GK</sheetColumns>
+    <sheetColumns>GL</sheetColumns>
+    <sheetColumns>GM</sheetColumns>
+    <sheetColumns>GN</sheetColumns>
+    <sheetColumns>GO</sheetColumns>
+    <sheetColumns>GP</sheetColumns>
+    <sheetColumns>GQ</sheetColumns>
+    <sheetColumns>GR</sheetColumns>
+    <sheetColumns>GS</sheetColumns>
+    <sheetColumns>GT</sheetColumns>
+    <sheetColumns>GU</sheetColumns>
+    <sheetColumns>GV</sheetColumns>
+    <sheetColumns>GW</sheetColumns>
+    <sheetColumns>GX</sheetColumns>
+    <sheetColumns>GY</sheetColumns>
+    <sheetColumns>GZ</sheetColumns>
+    <sheetColumns>HA</sheetColumns>
+    <sheetColumns>HB</sheetColumns>
+    <sheetColumns>HC</sheetColumns>
+    <sheetColumns>HD</sheetColumns>
+    <sheetColumns>HE</sheetColumns>
+    <sheetColumns>HF</sheetColumns>
+    <sheetColumns>HG</sheetColumns>
+    <sheetColumns>HH</sheetColumns>
+    <sheetColumns>HI</sheetColumns>
+    <sheetColumns>HJ</sheetColumns>
+    <sheetColumns>HK</sheetColumns>
+    <sheetColumns>HL</sheetColumns>
+    <sheetColumns>HM</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_2X71IPFzEemYq66fyBqdRw" name="default" dataManager="_2XphQPFzEemYq66fyBqdRw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_2X71IfFzEemYq66fyBqdRw" id="_QBYJ8PFzEemYq66fyBqdRw" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71IvFzEemYq66fyBqdRw" label="Columns_veitone" length="500" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71I_FzEemYq66fyBqdRw" label="all_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71JPFzEemYq66fyBqdRw" label="all_Weighted" length="6" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71JfFzEemYq66fyBqdRw" label="all_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71JvFzEemYq66fyBqdRw" label="all_Percent_Value_Present" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71J_FzEemYq66fyBqdRw" label="Men_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71KPFzEemYq66fyBqdRw" label="Men_Weighted" length="6" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71KfFzEemYq66fyBqdRw" label="Men_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71KvFzEemYq66fyBqdRw" label="Men_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71K_FzEemYq66fyBqdRw" label="Men_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71LPFzEemYq66fyBqdRw" label="Men_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71LfFzEemYq66fyBqdRw" label="Women_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71LvFzEemYq66fyBqdRw" label="Women_Weighted" length="6" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71L_FzEemYq66fyBqdRw" label="Women_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71MPFzEemYq66fyBqdRw" label="Women_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71MfFzEemYq66fyBqdRw" label="Women_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71MvFzEemYq66fyBqdRw" label="Women_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71M_FzEemYq66fyBqdRw" label="Age_18_24_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71NPFzEemYq66fyBqdRw" label="Age_18_24_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71NfFzEemYq66fyBqdRw" label="Age_18_24_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71NvFzEemYq66fyBqdRw" label="Age_18_24_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71N_FzEemYq66fyBqdRw" label="Age_18_24_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71OPFzEemYq66fyBqdRw" label="Age_18_24_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71OfFzEemYq66fyBqdRw" label="Age_25_34_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71OvFzEemYq66fyBqdRw" label="Age_25_34_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71O_FzEemYq66fyBqdRw" label="Age_25_34_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71PPFzEemYq66fyBqdRw" label="Age_25_34_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71PfFzEemYq66fyBqdRw" label="Age_25_34_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71PvFzEemYq66fyBqdRw" label="Age_25_34_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71P_FzEemYq66fyBqdRw" label="Age_35_44_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71QPFzEemYq66fyBqdRw" label="Age_35_44_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71QfFzEemYq66fyBqdRw" label="Age_35_44_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71QvFzEemYq66fyBqdRw" label="Age_35_44_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71Q_FzEemYq66fyBqdRw" label="Age_35_44_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71RPFzEemYq66fyBqdRw" label="Age_35_44_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71RfFzEemYq66fyBqdRw" label="Age_45_54_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71RvFzEemYq66fyBqdRw" label="Age_45_54_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71R_FzEemYq66fyBqdRw" label="Age_45_54_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71SPFzEemYq66fyBqdRw" label="Age_45_54_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X71SfFzEemYq66fyBqdRw" label="Age_45_54_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cMPFzEemYq66fyBqdRw" label="Age_45_54_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cMfFzEemYq66fyBqdRw" label="Age_55_64_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cMvFzEemYq66fyBqdRw" label="Age_55_64_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cM_FzEemYq66fyBqdRw" label="Age_55_64_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cNPFzEemYq66fyBqdRw" label="Age_55_64_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cNfFzEemYq66fyBqdRw" label="Age_55_64_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cNvFzEemYq66fyBqdRw" label="Age_55_64_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cN_FzEemYq66fyBqdRw" label="Age_65_above_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cOPFzEemYq66fyBqdRw" label="Age_65_above_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cOfFzEemYq66fyBqdRw" label="Age_65_above_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cOvFzEemYq66fyBqdRw" label="Age_65_above_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cO_FzEemYq66fyBqdRw" label="Age_65_above_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cPPFzEemYq66fyBqdRw" label="Age_65_above_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cPfFzEemYq66fyBqdRw" label="Adults_18_34_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cPvFzEemYq66fyBqdRw" label="Adults_18_34_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cP_FzEemYq66fyBqdRw" label="Adults_18_34_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cQPFzEemYq66fyBqdRw" label="Adults_18_34_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cQfFzEemYq66fyBqdRw" label="Adults_18_34_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cQvFzEemYq66fyBqdRw" label="Adults_18_34_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cQ_FzEemYq66fyBqdRw" label="Adults_18_49_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cRPFzEemYq66fyBqdRw" label="Adults_18_49_Weighted" length="6" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cRfFzEemYq66fyBqdRw" label="Adults_18_49_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cRvFzEemYq66fyBqdRw" label="Adults_18_49_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cR_FzEemYq66fyBqdRw" label="Adults_18_49_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cSPFzEemYq66fyBqdRw" label="Adults_18_49_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cSfFzEemYq66fyBqdRw" label="Adults_25_54_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cSvFzEemYq66fyBqdRw" label="Adults_25_54_Weighted" length="6" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cS_FzEemYq66fyBqdRw" label="Adults_25_54_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cTPFzEemYq66fyBqdRw" label="Adults_25_54_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cTfFzEemYq66fyBqdRw" label="Adults_25_54_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cTvFzEemYq66fyBqdRw" label="Adults_25_54_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cT_FzEemYq66fyBqdRw" label="Adults_35_54_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cUPFzEemYq66fyBqdRw" label="Adults_35_54_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cUfFzEemYq66fyBqdRw" label="Adults_35_54_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cUvFzEemYq66fyBqdRw" label="Adults_35_54_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cU_FzEemYq66fyBqdRw" label="Adults_35_54_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cVPFzEemYq66fyBqdRw" label="Adults_35_54_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cVfFzEemYq66fyBqdRw" label="Men_18_34_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cVvFzEemYq66fyBqdRw" label="Men_18_34_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cV_FzEemYq66fyBqdRw" label="Men_18_34_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cWPFzEemYq66fyBqdRw" label="Men_18_34_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cWfFzEemYq66fyBqdRw" label="Men_18_34_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cWvFzEemYq66fyBqdRw" label="Men_18_34_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cW_FzEemYq66fyBqdRw" label="Men_18_49_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cXPFzEemYq66fyBqdRw" label="Men_18_49_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cXfFzEemYq66fyBqdRw" label="Men_18_49_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cXvFzEemYq66fyBqdRw" label="Men_18_49_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cX_FzEemYq66fyBqdRw" label="Men_18_49_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cYPFzEemYq66fyBqdRw" label="Men_18_49_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cYfFzEemYq66fyBqdRw" label="Men_25_54_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cYvFzEemYq66fyBqdRw" label="Men_25_54_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cY_FzEemYq66fyBqdRw" label="Men_25_54_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cZPFzEemYq66fyBqdRw" label="Men_25_54_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cZfFzEemYq66fyBqdRw" label="Men_25_54_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cZvFzEemYq66fyBqdRw" label="Men_25_54_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cZ_FzEemYq66fyBqdRw" label="Men_35_54_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8caPFzEemYq66fyBqdRw" label="Men_35_54_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cafFzEemYq66fyBqdRw" label="Men_35_54_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cavFzEemYq66fyBqdRw" label="Men_35_54_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8ca_FzEemYq66fyBqdRw" label="Men_35_54_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cbPFzEemYq66fyBqdRw" label="Men_35_54_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cbfFzEemYq66fyBqdRw" label="Women_18_34_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cbvFzEemYq66fyBqdRw" label="Women_18_34_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8cb_FzEemYq66fyBqdRw" label="Women_18_34_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8ccPFzEemYq66fyBqdRw" label="Women_18_34_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X8ccfFzEemYq66fyBqdRw" label="Women_18_34_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DQPFzEemYq66fyBqdRw" label="Women_18_34_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DQfFzEemYq66fyBqdRw" label="Women_18_49_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DQvFzEemYq66fyBqdRw" label="Women_18_49_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DQ_FzEemYq66fyBqdRw" label="Women_18_49_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DRPFzEemYq66fyBqdRw" label="Women_18_49_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DRfFzEemYq66fyBqdRw" label="Women_18_49_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DRvFzEemYq66fyBqdRw" label="Women_18_49_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DR_FzEemYq66fyBqdRw" label="Women_25_54_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DSPFzEemYq66fyBqdRw" label="Women_25_54_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DSfFzEemYq66fyBqdRw" label="Women_25_54_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DSvFzEemYq66fyBqdRw" label="Women_25_54_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DS_FzEemYq66fyBqdRw" label="Women_25_54_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DTPFzEemYq66fyBqdRw" label="Women_25_54_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DTfFzEemYq66fyBqdRw" label="Women_35_54_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DTvFzEemYq66fyBqdRw" label="Women_35_54_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DT_FzEemYq66fyBqdRw" label="Women_35_54_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DUPFzEemYq66fyBqdRw" label="Women_35_54_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DUfFzEemYq66fyBqdRw" label="Women_35_54_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DUvFzEemYq66fyBqdRw" label="Women_35_54_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DU_FzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_1000000_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DVPFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_1000000_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DVfFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_1000000_Horz_percent" length="5" precision="4" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DVvFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_1000000_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DV_FzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_1000000_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DWPFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_1000000_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DWfFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_500000_dollar_999999_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DWvFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_500000_dollar_999999_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DW_FzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_500000_dollar_999999_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DXPFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_500000_dollar_999999_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DXfFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_500000_dollar_999999_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DXvFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_500000_dollar_999999_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DX_FzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_250000_dollar_499999_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DYPFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_250000_dollar_499999_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DYfFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_250000_dollar_499999_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DYvFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_250000_dollar_499999_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DY_FzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_250000_dollar_499999_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DZPFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_250000_dollar_499999_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DZfFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_100000_dollar_249999_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DZvFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_100000_dollar_249999_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DZ_FzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_100000_dollar_249999_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DaPFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_100000_dollar_249999_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DafFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_100000_dollar_249999_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DavFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__dollar_100000_dollar_249999_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9Da_FzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__Under_dollar_100000_Unwgtd" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DbPFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__Under_dollar_100000_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DbfFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__Under_dollar_100000_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DbvFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__Under_dollar_100000_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9Db_FzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__Under_dollar_100000_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DcPFzEemYq66fyBqdRw" label="Total_Net_Worth_of_All_HH_Members__Under_dollar_100000_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DcfFzEemYq66fyBqdRw" label="Respondent_Occupation_Management_Occupations_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DcvFzEemYq66fyBqdRw" label="Respondent_Occupation_Management_Occupations_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9Dc_FzEemYq66fyBqdRw" label="Respondent_Occupation_Management_Occupations_Horz_percent" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DdPFzEemYq66fyBqdRw" label="Respondent_Occupation_Management_Occupations_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DdfFzEemYq66fyBqdRw" label="Respondent_Occupation_Management_Occupations_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DdvFzEemYq66fyBqdRw" label="Respondent_Occupation_Management_Occupations_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9Dd_FzEemYq66fyBqdRw" label="Business_and_Financial_Operations_Occupations_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DePFzEemYq66fyBqdRw" label="Business_and_Financial_Operations_Occupations_Weighted" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DefFzEemYq66fyBqdRw" label="Business_and_Financial_Operations_Occupations_Horz_percent" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DevFzEemYq66fyBqdRw" label="Business_and_Financial_Operations_Occupations_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9De_FzEemYq66fyBqdRw" label="Business_and_Financial_Operations_Occupations_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DfPFzEemYq66fyBqdRw" label="Business_and_Financial_Operations_Occupations_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DffFzEemYq66fyBqdRw" label="Computer_and_Mathematical_Occupations_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DfvFzEemYq66fyBqdRw" label="Computer_and_Mathematical_Occupations_Weighted" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9Df_FzEemYq66fyBqdRw" label="Computer_and_Mathematical_Occupations_Horz_percent" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DgPFzEemYq66fyBqdRw" label="Computer_and_Mathematical_Occupations_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DgfFzEemYq66fyBqdRw" label="Computer_and_Mathematical_Occupations_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DgvFzEemYq66fyBqdRw" label="Computer_and_Mathematical_Occupations_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9Dg_FzEemYq66fyBqdRw" label="Life_Physical_and_Social_Science_Occupations_Unwgtd" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DhPFzEemYq66fyBqdRw" label="Life_Physical_and_Social_Science_Occupations_Weighted" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DhfFzEemYq66fyBqdRw" label="Life_Physical_and_Social_Science_Occupations_Horz_percent" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DhvFzEemYq66fyBqdRw" label="Life_Physical_and_Social_Science_Occupations_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9Dh_FzEemYq66fyBqdRw" label="Life_Physical_and_Social_Science_Occupations_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DiPFzEemYq66fyBqdRw" label="Life_Physical_and_Social_Science_Occupations_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DifFzEemYq66fyBqdRw" label="Legal_Occupations_Unwgtd" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DivFzEemYq66fyBqdRw" label="Legal_Occupations_Weighted" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9Di_FzEemYq66fyBqdRw" label="Legal_Occupations_Horz_percent" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DjPFzEemYq66fyBqdRw" label="Legal_Occupations_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DjfFzEemYq66fyBqdRw" label="Legal_Occupations_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DjvFzEemYq66fyBqdRw" label="Legal_Occupations_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9Dj_FzEemYq66fyBqdRw" label="Healthcare_Practitioner_and_Technical_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DkPFzEemYq66fyBqdRw" label="Healthcare_Practitioner_and_Technical_Weighted" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DkfFzEemYq66fyBqdRw" label="Healthcare_Practitioner_and_Technical_Horz_percent" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DkvFzEemYq66fyBqdRw" label="Healthcare_Practitioner_and_Technical_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9Dk_FzEemYq66fyBqdRw" label="Healthcare_Practitioner_and_Technical_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DlPFzEemYq66fyBqdRw" label="Healthcare_Practitioner_and_Technical_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DlfFzEemYq66fyBqdRw" label="Healthcare_Support_Occupations_Unwgtd" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DlvFzEemYq66fyBqdRw" label="Healthcare_Support_Occupations_Weighted" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9Dl_FzEemYq66fyBqdRw" label="Healthcare_Support_Occupations_Horz_percent" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DmPFzEemYq66fyBqdRw" label="Healthcare_Support_Occupations_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DmfFzEemYq66fyBqdRw" label="Healthcare_Support_Occupations_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DmvFzEemYq66fyBqdRw" label="Healthcare_Support_Occupations_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9Dm_FzEemYq66fyBqdRw" label="Food_Preparation_Serving_Related_Occupations_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9DnPFzEemYq66fyBqdRw" label="Food_Preparation_Serving_Related_Occupations_Weighted" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qUPFzEemYq66fyBqdRw" label="Food_Preparation_Serving_Related_Occupations_Horz_percent" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qUfFzEemYq66fyBqdRw" label="Food_Preparation_Serving_Related_Occupations_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qUvFzEemYq66fyBqdRw" label="Food_Preparation_Serving_Related_Occupations_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qU_FzEemYq66fyBqdRw" label="Food_Preparation_Serving_Related_Occupations_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qVPFzEemYq66fyBqdRw" label="Sales_and_Related_Occupations_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qVfFzEemYq66fyBqdRw" label="Sales_and_Related_Occupations_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qVvFzEemYq66fyBqdRw" label="Sales_and_Related_Occupations_Horz_percent" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qV_FzEemYq66fyBqdRw" label="Sales_and_Related_Occupations_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qWPFzEemYq66fyBqdRw" label="Sales_and_Related_Occupations_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qWfFzEemYq66fyBqdRw" label="Sales_and_Related_Occupations_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qWvFzEemYq66fyBqdRw" label="Physical_Fitness_Regular_Exercise_Pgm_At_club_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qW_FzEemYq66fyBqdRw" label="Physical_Fitness_Regular_Exercise_Pgm_At_club_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qXPFzEemYq66fyBqdRw" label="Physical_Fitness_Regular_Exercise_Pgm_At_club_Horz_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qXfFzEemYq66fyBqdRw" label="Physical_Fitness_Regular_Exercise_Pgm_At_club_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qXvFzEemYq66fyBqdRw" label="Physical_Fitness_Regular_Exercise_Pgm_At_club_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qX_FzEemYq66fyBqdRw" label="Physical_Fitness_Regular_Exercise_Pgm_At_club_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qYPFzEemYq66fyBqdRw" label="At_other_facility_Unwgtd" length="4" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qYfFzEemYq66fyBqdRw" label="At_other_facility_Weighted" length="5" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qYvFzEemYq66fyBqdRw" label="At_other_facility_Horz_percent" length="4" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qY_FzEemYq66fyBqdRw" label="At_other_facility_Vert_percent" length="5" precision="3" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qZPFzEemYq66fyBqdRw" label="At_other_facility_Index" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_2X9qZfFzEemYq66fyBqdRw" label="At_other_facility_Likelihood" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

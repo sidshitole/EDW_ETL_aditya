@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_Qx5yEBaNEeqplOs1CKPvAw" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_nStb8CY4Eeqys_dZkW9jfA" comment="" name="host" prompt="host?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb8SY4Eeqys_dZkW9jfA" comment="" name="port" prompt="port?" promptNeeded="false" type="id_Long" value=""/>
+  <contextParameter xmi:id="_nStb8iY4Eeqys_dZkW9jfA" comment="" name="database" prompt="database?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb8yY4Eeqys_dZkW9jfA" comment="" name="username" prompt="username?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb9CY4Eeqys_dZkW9jfA" comment="" name="password" prompt="password?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb9SY4Eeqys_dZkW9jfA" comment="" name="Redhost" prompt="Redhost?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb9iY4Eeqys_dZkW9jfA" comment="" name="Redport" prompt="Redport?" promptNeeded="false" type="id_Long" value=""/>
+  <contextParameter xmi:id="_nStb9yY4Eeqys_dZkW9jfA" comment="" name="Reddatabase" prompt="Reddatabase?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb-CY4Eeqys_dZkW9jfA" comment="" name="Redusername" prompt="Redusername?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb-SY4Eeqys_dZkW9jfA" comment="" name="Redpassword" prompt="Redpassword?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb-iY4Eeqys_dZkW9jfA" comment="" name="accesskey" prompt="accesskey?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb-yY4Eeqys_dZkW9jfA" comment="" name="secretkey" prompt="secretkey?" promptNeeded="false" type="id_Password" value=""/>
+</talendfile:ContextType>
