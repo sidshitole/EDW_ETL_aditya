@@ -34,7 +34,7 @@
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
     <talend.job.name>fact_orders_fulfillment_status_updation</talend.job.name>
-    <talend.job.id>_cZUy0BwMEeqgUuHoxcek6w</talend.job.id>
+    <talend.job.id>_nDAiwDIPEeqisbJkNHXblg</talend.job.id>
     <talend.project.id>0</talend.project.id>
     <talend.job.framework></talend.job.framework>
     <talend.job.type>Standard</talend.job.type>
@@ -47,22 +47,12 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>activation</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
       <artifactId>dom4j-1.6.1</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>log4j-1.2.16</artifactId>
-      <version>6.0.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>mail-1.4</artifactId>
       <version>6.0.0</version>
     </dependency>
     <dependency>

@@ -447,6 +447,19 @@
       <relatedItems xmi:id="_Wf8Pmx23EeqA1YiQiezE2w" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_dUaj4SCzEeqsLcteNhREKg" id="_usTmIPSoEemOpdXDlSLH7A" version="Latest" type="context"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_nHL4IDIPEeqisbJkNHXblg">
+      <baseItem xmi:id="_nHL4ITIPEeqisbJkNHXblg" id="_nDAiwDIPEeqisbJkNHXblg" version="0.1" type="job"/>
+      <relatedItems xmi:id="_nHL4IjIPEeqisbJkNHXblg" id="_usTmIPSoEemOpdXDlSLH7A" version="Latest" type="context"/>
+      <relatedItems xmi:id="_nHL4IzIPEeqisbJkNHXblg" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_nHL4JDIPEeqisbJkNHXblg" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_nHMfMDIPEeqisbJkNHXblg" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_nHMfMTIPEeqisbJkNHXblg" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_nHMfMjIPEeqisbJkNHXblg" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_nHMfMzIPEeqisbJkNHXblg" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_nHMfNDIPEeqisbJkNHXblg" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_nHMfNTIPEeqisbJkNHXblg" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_nHMfNjIPEeqisbJkNHXblg" id="Mathematical" version="Latest" type="routine"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_B_hGgA1aEemYq66fyBqdRw" id="org.talend.designer.core.generic.model.migration.ChangeDriverJarForProjectSetting" breaks="7.0.1" version="7.0.1" status="ok"/>
     <migrationTask xmi:id="_B_hGgQ1aEemYq66fyBqdRw" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_B_hGgg1aEemYq66fyBqdRw" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>

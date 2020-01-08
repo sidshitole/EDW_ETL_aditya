@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="Database" prompt="Database?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;customer_test&quot;"/>
-    <contextParameter comment="" name="Host" prompt="Host?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;tj-aurora.co4b2y8p3rb6.us-east-1.rds.amazonaws.com&quot;"/>
-    <contextParameter comment="" name="Password" prompt="Password?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;Adi4745@kf!1!41z31@&quot;"/>
-    <contextParameter comment="" name="Port" prompt="Port?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;3306&quot;"/>
-    <contextParameter comment="" name="Username" prompt="Username?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;aditya&quot;"/>
+    <contextParameter comment="" name="SH_Database" prompt="SH_Database?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;customer_test&quot;"/>
+    <contextParameter comment="" name="SH_RR_Host" prompt="SH_RR_Host?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;tj-aurora.co4b2y8p3rb6.us-east-1.rds.amazonaws.com&quot;"/>
+    <contextParameter comment="" name="SH_Password" prompt="SH_Password?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;Adi4745@kf!1!41z31@&quot;"/>
+    <contextParameter comment="" name="SH_Port" prompt="SH_Port?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;3306&quot;"/>
+    <contextParameter comment="" name="SH_Username" prompt="SH_Username?" promptNeeded="false" repositoryContextId="_usTmIPSoEemOpdXDlSLH7A" type="id_String" value="&quot;aditya&quot;"/>
     <contextParameter comment="" name="Last_id" prompt="Last_id?" promptNeeded="false" type="id_Integer" value=""/>
     <contextParameter comment="" name="since_id" prompt="since_id?" promptNeeded="false" type="id_Object" value=""/>
   </context>
@@ -159,6 +159,7 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_2">
       <column comment="" key="false" length="-1" name="email" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -271,6 +272,7 @@
     <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" value="false"/>
     <elementParameter field="TABLE" name="DUPLICATED_KEYS" show="false"/>
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="output" name="tDBOutput_1">
       <column comment="" key="false" length="-1" name="id" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="email" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -322,7 +324,7 @@
       <column comment="" key="false" length="-1" name="is_first_amazon_customer" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="output">
         <mapperTableEntries name="id" expression="row2.id" type="id_Integer" nullable="true"/>
@@ -396,6 +398,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBCommit_3" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
     <elementParameter field="CHECK" name="CLOSE" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBCommit_3"/>
   </node>
   <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="320">
@@ -438,6 +441,7 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBCommit_4" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tDBConnection_1"/>
     <elementParameter field="CHECK" name="CLOSE" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBCommit_4"/>
   </node>
   <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="768" posY="416">
@@ -468,6 +472,7 @@
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBRow_3"/>
     <metadata connector="REJECT" name="REJECT">
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -530,13 +535,13 @@
   <node componentName="tMysqlConnection" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBConnection_1" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
-    <elementParameter field="TEXT" name="HOST" value="context.Host"/>
+    <elementParameter field="TEXT" name="HOST" value="context.SH_RR_Host"/>
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.Database"/>
+    <elementParameter field="TEXT" name="DBNAME" value="context.SH_Database"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="context.Username"/>
-    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kufqm00cCzjF7T9AKOTpPmD8"/>
+    <elementParameter field="TEXT" name="USER" value="context.SH_Username"/>
+    <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kucRdgb3Dhex57Ka2ZeH0Yhi"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="USE_SHARED_CONNECTION" value="false"/>
@@ -545,6 +550,7 @@
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="AUTO_COMMIT" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
   <node componentName="tMysqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRow_1" show="false"/>
@@ -689,7 +695,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>

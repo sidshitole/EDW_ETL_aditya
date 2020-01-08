@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_us9tcPSoEemOpdXDlSLH7A" confirmationNeeded="false" name="Default">
-  <contextParameter xmi:id="_us-UgPSoEemOpdXDlSLH7A" comment="" name="Host" prompt="Host?" promptNeeded="false" type="id_String" value="&quot;tj-aurora.co4b2y8p3rb6.us-east-1.rds.amazonaws.com&quot;"/>
-  <contextParameter xmi:id="_us-UgfSoEemOpdXDlSLH7A" comment="" name="Username" prompt="Username?" promptNeeded="false" type="id_String" value="&quot;aditya&quot;"/>
-  <contextParameter xmi:id="_us-UgvSoEemOpdXDlSLH7A" comment="" name="Password" prompt="Password?" promptNeeded="false" type="id_String" value="&quot;Adi4745@kf!1!41z31@&quot;"/>
-  <contextParameter xmi:id="_GksiIPSqEemOpdXDlSLH7A" comment="" name="Database" prompt="Database?" promptNeeded="false" type="id_String" value="&quot;customer_test&quot;"/>
-  <contextParameter xmi:id="_nthHsPSrEemOpdXDlSLH7A" comment="" name="Port" prompt="Port?" promptNeeded="false" type="id_String" value="&quot;3306&quot;"/>
-  <contextParameter xmi:id="_DMIzMCY0Eeqys_dZkW9jfA" comment="" name="Redhost" prompt="Redhost?" promptNeeded="false" type="id_String" value="&quot;tj-dwh.cuqlvskmdbmy.us-east-1.redshift.amazonaws.com&quot;"/>
-  <contextParameter xmi:id="_DMIzMSY0Eeqys_dZkW9jfA" comment="" name="Redport" prompt="Redport?" promptNeeded="false" type="id_String" value="&quot;5439&quot;"/>
-  <contextParameter xmi:id="_DMIzMiY0Eeqys_dZkW9jfA" comment="" name="Reddatabase" prompt="Reddatabase?" promptNeeded="false" type="id_String" value="&quot;dev&quot;"/>
-  <contextParameter xmi:id="_acmzkCY1Eeqys_dZkW9jfA" comment="" name="Redusername" prompt="Redusername?" promptNeeded="false" type="id_String" value="&quot;aditya&quot;"/>
-  <contextParameter xmi:id="_acmzkSY1Eeqys_dZkW9jfA" comment="" name="Redpassword" prompt="Redpassword?" promptNeeded="false" type="id_String" value="&quot;A2d2!fhgnd@7#11Ld&quot;"/>
+  <contextParameter xmi:id="_us-UgPSoEemOpdXDlSLH7A" comment="" name="SH_RR_Host" prompt="SH_RR_Host?" promptNeeded="false" type="id_String" value="&quot;tj-aurora.co4b2y8p3rb6.us-east-1.rds.amazonaws.com&quot;"/>
+  <contextParameter xmi:id="_us-UgfSoEemOpdXDlSLH7A" comment="" name="SH_Username" prompt="SH_Username?" promptNeeded="false" type="id_String" value="&quot;aditya&quot;"/>
+  <contextParameter xmi:id="_us-UgvSoEemOpdXDlSLH7A" comment="" name="SH_Password" prompt="SH_Password?" promptNeeded="false" type="id_String" value="&quot;Adi4745@kf!1!41z31@&quot;"/>
+  <contextParameter xmi:id="_GksiIPSqEemOpdXDlSLH7A" comment="" name="SH_Database" prompt="SH_Database?" promptNeeded="false" type="id_String" value="&quot;customer_test&quot;"/>
+  <contextParameter xmi:id="_nthHsPSrEemOpdXDlSLH7A" comment="" name="SH_Port" prompt="SH_Port?" promptNeeded="false" type="id_String" value="&quot;3306&quot;"/>
+  <contextParameter xmi:id="_DMIzMCY0Eeqys_dZkW9jfA" comment="" name="EDW_Host" prompt="EDW_Host?" promptNeeded="false" type="id_String" value="&quot;tj-dwh.cuqlvskmdbmy.us-east-1.redshift.amazonaws.com&quot;"/>
+  <contextParameter xmi:id="_DMIzMSY0Eeqys_dZkW9jfA" comment="" name="EDW_Port" prompt="EDW_Port?" promptNeeded="false" type="id_String" value="&quot;5439&quot;"/>
+  <contextParameter xmi:id="_DMIzMiY0Eeqys_dZkW9jfA" comment="" name="EDW_Database" prompt="EDW_Database?" promptNeeded="false" type="id_String" value="&quot;dev&quot;"/>
+  <contextParameter xmi:id="_acmzkCY1Eeqys_dZkW9jfA" comment="" name="EDW_Username" prompt="EDW_Username?" promptNeeded="false" type="id_String" value="&quot;aditya&quot;"/>
+  <contextParameter xmi:id="_acmzkSY1Eeqys_dZkW9jfA" comment="" name="EDW_Password" prompt="EDW_Password?" promptNeeded="false" type="id_String" value="&quot;A2d2!fhgnd@7#11Ld&quot;"/>
   <contextParameter xmi:id="_sJ8ikCY2Eeqys_dZkW9jfA" comment="" name="accesskey" prompt="accesskey?" promptNeeded="false" type="id_String" value="&quot;AKIA4XY6DFDCB3QNGL7M&quot;"/>
   <contextParameter xmi:id="_vkI14CZUEeqys_dZkW9jfA" comment="" name="secretkey" prompt="secretkey?" promptNeeded="false" type="id_Password" value="yt/mhHknSvIGNKmHIRInSYA4RhHZf/9A5pqnO4Htqa3gZKIJSDS/sGAqaA3PQgg8"/>
+  <contextParameter xmi:id="_jW3YQDH7EeqisbJkNHXblg" comment="" name="EDW_Schema" prompt="EDW_Schema?" promptNeeded="false" type="id_String" value="&quot;tj_dwh_prod&quot;"/>
 </talendfile:ContextType>

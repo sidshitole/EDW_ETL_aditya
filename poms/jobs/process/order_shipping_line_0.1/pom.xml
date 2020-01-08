@@ -3,29 +3,29 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.example.local_project</groupId>
+    <groupId>org.example.edw_etl_aditya</groupId>
     <artifactId>code.Master</artifactId>
     <version>7.0.1</version>
     <relativePath>../../../</relativePath>
   </parent>
-  <groupId>org.example.local_project.job</groupId>
+  <groupId>org.example.edw_etl_aditya.job</groupId>
   <artifactId>order_shipping_line</artifactId>
   <version>0.1.0</version>
-  <name>LOCAL_PROJECT order_shipping_line-0.1.0 (0.1,Job Designs)</name>
+  <name>EDW_ETL_ADITYA order_shipping_line-0.1.0 (0.1,Job Designs)</name>
   <properties>
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <talend.job.applyContextToChildren>false</talend.job.applyContextToChildren>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <talend.job.version>0.1</talend.job.version>
-    <talend.project.name.lowercase>local_project</talend.project.name.lowercase>
-    <talend.job.path>local_project/order_shipping_line_0_1</talend.job.path>
+    <talend.project.name.lowercase>edw_etl_aditya</talend.project.name.lowercase>
+    <talend.job.path>edw_etl_aditya/order_shipping_line_0_1</talend.job.path>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
-    <talend.project.name>LOCAL_PROJECT</talend.project.name>
+    <talend.project.name>EDW_ETL_ADITYA</talend.project.name>
     <talend.product.version>7.0.1.20180411_1414</talend.product.version>
     <talend.job.finalName>order_shipping_line_0_1</talend.job.finalName>
-    <talend.pigudf.groupid>org.example.local_project.pigudf</talend.pigudf.groupid>
-    <talend.routine.groupid>org.example.local_project.code</talend.routine.groupid>
+    <talend.pigudf.groupid>org.example.edw_etl_aditya.pigudf</talend.pigudf.groupid>
+    <talend.routine.groupid>org.example.edw_etl_aditya.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
     <talend.project.branch></talend.project.branch>
@@ -61,7 +61,7 @@
       <version>6.0.0</version>
     </dependency>
     <dependency>
-      <groupId>org.example.local_project.code</groupId>
+      <groupId>org.example.edw_etl_aditya.code</groupId>
       <artifactId>routines</artifactId>
       <version>7.0.1</version>
     </dependency>

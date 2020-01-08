@@ -35,8 +35,9 @@
     <module>jobs/process/orders_shipping_lines_0.1</module>
     <module>jobs/process/orders_shipping_lines1_0.1</module>
     <module>jobs/process/amazon_cross_sale3_0.1</module>
-    <module>jobs/process/fact_orders_fulfillment_status_updation_0.1</module>
     <module>jobs/process/fact_orders_fulfillment_status_updation1_0.1</module>
+    <module>jobs/process/fact_orders_fulfillment_status_updation_old_0.1</module>
+    <module>jobs/process/fact_orders_fulfillment_status_updation_0.1</module>
   </modules>
   <properties>
     <talend.project.name>EDW_ETL_ADITYA</talend.project.name>
