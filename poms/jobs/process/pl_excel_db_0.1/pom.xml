@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.example.edw_etl_aditya</groupId>
     <artifactId>code.Master</artifactId>
-    <version>7.0.1</version>
+    <version>7.1.1</version>
     <relativePath>../../../</relativePath>
   </parent>
   <groupId>org.example.edw_etl_aditya.job</groupId>
@@ -20,15 +20,15 @@
     <talend.job.version>0.1</talend.job.version>
     <talend.project.name.lowercase>edw_etl_aditya</talend.project.name.lowercase>
     <talend.job.path>edw_etl_aditya/pl_excel_db_0_1</talend.job.path>
+    <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.name>EDW_ETL_ADITYA</talend.project.name>
-    <talend.product.version>7.0.1.20180411_1414</talend.product.version>
+    <talend.product.version>7.1.1.20181026_1147</talend.product.version>
     <talend.job.finalName>pl_excel_db_0_1</talend.job.finalName>
     <talend.pigudf.groupid>org.example.edw_etl_aditya.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.edw_etl_aditya.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
-    <talend.project.branch></talend.project.branch>
     <talend.job.context>Default</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
@@ -36,7 +36,9 @@
     <talend.job.name>pl_excel_db</talend.job.name>
     <talend.job.id>_LsUwwPowEem4eK3dBnhTWA</talend.job.id>
     <talend.project.id>0</talend.project.id>
+    <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <talend.job.framework></talend.job.framework>
+    <talend.job.folder></talend.job.folder>
     <talend.job.type>Standard</talend.job.type>
   </properties>
   <dependencies>
@@ -46,9 +48,9 @@
       <version>6.0.0</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>aopalliance-1.0</artifactId>
-      <version>6.4.0</version>
+      <groupId>aopalliance</groupId>
+      <artifactId>aopalliance</artifactId>
+      <version>1.0</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -68,67 +70,67 @@
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-core</artifactId>
-      <version>3.2.4</version>
+      <version>3.2.6</version>
     </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-rt-bindings-soap</artifactId>
-      <version>3.2.4</version>
+      <version>3.2.6</version>
     </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-rt-databinding-jaxb</artifactId>
-      <version>3.2.4</version>
+      <version>3.2.6</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>cxf-rt-frontend-jaxrs-3.2.4</artifactId>
+      <artifactId>cxf-rt-frontend-jaxrs-3.2.6</artifactId>
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>cxf-rt-rs-client-3.2.4</artifactId>
+      <artifactId>cxf-rt-rs-client-3.2.6</artifactId>
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>cxf-rt-rs-extension-providers-3.2.4</artifactId>
+      <artifactId>cxf-rt-rs-extension-providers-3.2.6</artifactId>
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-rt-security</artifactId>
-      <version>3.2.4</version>
+      <version>3.2.6</version>
     </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-rt-security-saml</artifactId>
-      <version>3.2.4</version>
+      <version>3.2.6</version>
     </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-rt-transports-http</artifactId>
-      <version>3.2.4</version>
+      <version>3.2.6</version>
     </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-rt-ws-security</artifactId>
-      <version>3.2.4</version>
+      <version>3.2.6</version>
     </dependency>
     <dependency>
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-rt-wsdl</artifactId>
-      <version>3.2.4</version>
+      <version>3.2.6</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>dom4j-1.6.1</artifactId>
-      <version>6.0.0</version>
+      <groupId>dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>1.6.1</version>
     </dependency>
     <dependency>
       <groupId>net.sf.ehcache</groupId>
       <artifactId>ehcache</artifactId>
-      <version>2.10.4</version>
+      <version>2.10.5</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -171,9 +173,9 @@
       <version>6.0.0</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>log4j-1.2.16</artifactId>
-      <version>6.0.0</version>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -267,7 +269,7 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>security-common-7.0.1</artifactId>
+      <artifactId>security-common-7.1.1</artifactId>
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
@@ -282,33 +284,33 @@
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-aop-4.3.10.RELEASE</artifactId>
+      <artifactId>spring-aop-4.3.18.RELEASE</artifactId>
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-beans-4.3.10.RELEASE</artifactId>
+      <artifactId>spring-beans-4.3.18.RELEASE</artifactId>
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-context-4.3.10.RELEASE</artifactId>
+      <artifactId>spring-context-4.3.18.RELEASE</artifactId>
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-core-4.3.10.RELEASE</artifactId>
+      <artifactId>spring-core-4.3.18.RELEASE</artifactId>
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
-      <artifactId>spring-expression-4.3.10.RELEASE</artifactId>
+      <artifactId>spring-expression-4.3.18.RELEASE</artifactId>
       <version>6.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
-      <groupId>org.talend.libraries</groupId>
-      <artifactId>stax-api-1.0-2</artifactId>
-      <version>6.4.0</version>
+      <groupId>javax.xml.stream</groupId>
+      <artifactId>stax-api</artifactId>
+      <version>1.0-2</version>
     </dependency>
     <dependency>
       <groupId>org.talend.libraries</groupId>
@@ -323,32 +325,32 @@
     <dependency>
       <groupId>org.apache.wss4j</groupId>
       <artifactId>wss4j-bindings</artifactId>
-      <version>2.2.1</version>
+      <version>2.2.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.wss4j</groupId>
       <artifactId>wss4j-policy</artifactId>
-      <version>2.2.1</version>
+      <version>2.2.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.wss4j</groupId>
       <artifactId>wss4j-ws-security-common</artifactId>
-      <version>2.2.1</version>
+      <version>2.2.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.wss4j</groupId>
       <artifactId>wss4j-ws-security-dom</artifactId>
-      <version>2.2.1</version>
+      <version>2.2.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.wss4j</groupId>
       <artifactId>wss4j-ws-security-policy-stax</artifactId>
-      <version>2.2.1</version>
+      <version>2.2.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.wss4j</groupId>
       <artifactId>wss4j-ws-security-stax</artifactId>
-      <version>2.2.1</version>
+      <version>2.2.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.ws.xmlschema</groupId>
@@ -358,12 +360,12 @@
     <dependency>
       <groupId>org.apache.santuario</groupId>
       <artifactId>xmlsec</artifactId>
-      <version>2.1.1</version>
+      <version>2.1.2</version>
     </dependency>
     <dependency>
       <groupId>org.example.edw_etl_aditya.code</groupId>
       <artifactId>routines</artifactId>
-      <version>7.0.1</version>
+      <version>7.1.1</version>
     </dependency>
   </dependencies>
   <build>
@@ -400,6 +402,30 @@
       </build>
     </profile>
     <profile>
+      <id>signature</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.talend.ci</groupId>
+            <artifactId>signer-maven-plugin</artifactId>
+            <version>${talend.version}</version>
+            <executions>
+              <execution>
+                <id>sign</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
       <id>default-settings</id>
       <activation>
         <activeByDefault>true</activeByDefault>
@@ -425,9 +451,15 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <templates.dir>${basedir}/src/main/templates/</templates.dir>
-        <poms.dir>${basedir}</poms.dir>
         <assemblies.dir>${basedir}/src/main/assemblies/</assemblies.dir>
+        <pigudfpom.dir>${parentpom.dir}code/pigudf/</pigudfpom.dir>
+        <routinescode.dir>${parentpom.dir}code/routines/src/main/</routinescode.dir>
+        <parentpom.dir>${project.parent.relativePath}</parentpom.dir>
+        <templates.dir>${basedir}/src/main/templates/</templates.dir>
+        <routinespom.dir>${parentpom.dir}code/routines/</routinespom.dir>
+        <pigudfcode.dir>${parentpom.dir}code/pigudf/src/main/</pigudfcode.dir>
+        <joblet.dir>${parentpom.dir}jobs/</joblet.dir>
+        <poms.dir>${basedir}</poms.dir>
       </properties>
     </profile>
     <profile>
@@ -540,15 +572,6 @@
       <id>include-microservice-running-configs</id>
       <properties>
         <microservice.running.configs.dir>${current.int-resources.dir}/</microservice.running.configs.dir>
-      </properties>
-    </profile>
-    <profile>
-      <id>include-survivorship-rules</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <properties>
-        <survivorship.rules.dir>${current.resources.dir}/metadata/survivorship/</survivorship.rules.dir>
       </properties>
     </profile>
   </profiles>

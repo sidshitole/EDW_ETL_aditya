@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example.edw_etl_aditya</groupId>
   <artifactId>code.Master</artifactId>
-  <version>7.0.1</version>
+  <version>7.1.1</version>
   <packaging>pom</packaging>
   <name>EDW_ETL_ADITYA Codes Master</name>
   <url>http://www.talend.org/</url>
@@ -25,10 +25,8 @@
     <module>jobs/process/contextlastid1_0.1</module>
     <module>jobs/process/contextlastidapi_0.1</module>
     <module>jobs/process/amazon_cannibalization_job_process_to_csv_0.1</module>
-    <module>jobs/process/amazon_cannibalization_job_process_to_db_0.1</module>
     <module>jobs/process/amazon_cross_sale_0.1</module>
     <module>jobs/process/amazon_cross_sale1_0.1</module>
-    <module>jobs/process/amazon_cross_sale2_0.1</module>
     <module>jobs/process/orders_shipping_line_0.1</module>
     <module>jobs/process/orders_shipping_line1_0.1</module>
     <module>jobs/process/order_shipping_line_0.1</module>
@@ -38,10 +36,16 @@
     <module>jobs/process/fact_orders_fulfillment_status_updation1_0.1</module>
     <module>jobs/process/fact_orders_fulfillment_status_updation_old_0.1</module>
     <module>jobs/process/fact_orders_fulfillment_status_updation_0.1</module>
+    <module>jobs/process/zendesk_users_0.1</module>
+    <module>jobs/process/zendesk_tickets_old_0.1</module>
+    <module>jobs/process/zendesk_tickets_0.1</module>
+    <module>jobs/process/dim_amazon_customers_0.1</module>
+    <module>jobs/process/amazon_cannibalization_job_process_0.1</module>
   </modules>
   <properties>
     <talend.project.name>EDW_ETL_ADITYA</talend.project.name>
     <encoding>UTF-8</encoding>
+    <talend.version>7.1.1</talend.version>
   </properties>
   <build>
     <pluginManagement>

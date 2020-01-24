@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_sjW5oDuWEeqCzYRd3iF3Gg" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_sjW5oTuWEeqCzYRd3iF3Gg" comment="" name="EDW_Host" prompt="EDW_Host?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjW5ojuWEeqCzYRd3iF3Gg" comment="" name="EDW_Port" prompt="EDW_Port?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjW5ozuWEeqCzYRd3iF3Gg" comment="" name="EDW_Database" prompt="EDW_Database?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXgsDuWEeqCzYRd3iF3Gg" comment="" name="EDW_Schema" prompt="EDW_Schema?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXgsTuWEeqCzYRd3iF3Gg" comment="" name="EDW_Username" prompt="EDW_Username?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXgsjuWEeqCzYRd3iF3Gg" comment="" name="EDW_Password" prompt="EDW_Password?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXgszuWEeqCzYRd3iF3Gg" comment="" name="SH_Host" prompt="SH_Host?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXgtDuWEeqCzYRd3iF3Gg" comment="" name="SH_Port" prompt="SH_Port?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXgtTuWEeqCzYRd3iF3Gg" comment="" name="SH_Database" prompt="SH_Database?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXgtjuWEeqCzYRd3iF3Gg" comment="" name="SH_Username" prompt="SH_Username?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXgtzuWEeqCzYRd3iF3Gg" comment="" name="SH_Password" prompt="SH_Password?" promptNeeded="false" type="id_Password" value=""/>
+  <contextParameter xmi:id="_sjXguDuWEeqCzYRd3iF3Gg" comment="" name="CRM_Staging" prompt="CRM_Staging?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXguTuWEeqCzYRd3iF3Gg" comment="" name="Impact_Staging" prompt="Impact_Staging?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXgujuWEeqCzYRd3iF3Gg" comment="" name="SendMailTo" prompt="SendMailTo?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXguzuWEeqCzYRd3iF3Gg" comment="" name="SendMailFrom" prompt="SendMailFrom?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXgvDuWEeqCzYRd3iF3Gg" comment="" name="SendMailUsername" prompt="SendMailUsername?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXgvTuWEeqCzYRd3iF3Gg" comment="" name="SendMailPassword" prompt="SendMailPassword?" promptNeeded="false" type="id_Password" value=""/>
+  <contextParameter xmi:id="_sjXgvjuWEeqCzYRd3iF3Gg" comment="" name="SMTP_Host" prompt="SMTP_Host?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_sjXgvzuWEeqCzYRd3iF3Gg" comment="" name="SMTP_Port" prompt="SMTP_Port?" promptNeeded="false" type="id_String" value=""/>
+</talendfile:ContextType>
