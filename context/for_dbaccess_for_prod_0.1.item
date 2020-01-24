@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_Qx5yEBaNEeqplOs1CKPvAw" confirmationNeeded="false" name="Default">
-  <contextParameter xmi:id="_nStb8CY4Eeqys_dZkW9jfA" comment="" name="host" prompt="host?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_nStb8SY4Eeqys_dZkW9jfA" comment="" name="port" prompt="port?" promptNeeded="false" type="id_Long" value=""/>
-  <contextParameter xmi:id="_nStb8iY4Eeqys_dZkW9jfA" comment="" name="database" prompt="database?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_nStb8yY4Eeqys_dZkW9jfA" comment="" name="username" prompt="username?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_nStb9CY4Eeqys_dZkW9jfA" comment="" name="password" prompt="password?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_nStb9SY4Eeqys_dZkW9jfA" comment="" name="Redhost" prompt="Redhost?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_nStb9iY4Eeqys_dZkW9jfA" comment="" name="Redport" prompt="Redport?" promptNeeded="false" type="id_Long" value=""/>
-  <contextParameter xmi:id="_nStb9yY4Eeqys_dZkW9jfA" comment="" name="Reddatabase" prompt="Reddatabase?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_nStb-CY4Eeqys_dZkW9jfA" comment="" name="Redusername" prompt="Redusername?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_nStb-SY4Eeqys_dZkW9jfA" comment="" name="Redpassword" prompt="Redpassword?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_nStb-iY4Eeqys_dZkW9jfA" comment="" name="accesskey" prompt="accesskey?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_nStb-yY4Eeqys_dZkW9jfA" comment="" name="secretkey" prompt="secretkey?" promptNeeded="false" type="id_Password" value=""/>
+  <contextParameter xmi:id="_nStb8CY4Eeqys_dZkW9jfA" comment="" name="EDW_Host" prompt="EDW_Host?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb8SY4Eeqys_dZkW9jfA" comment="" name="EDW_Port" prompt="EDW_Port?" promptNeeded="false" type="id_Long" value=""/>
+  <contextParameter xmi:id="_nStb8iY4Eeqys_dZkW9jfA" comment="" name="EDW_Database" prompt="EDW_Database?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb8yY4Eeqys_dZkW9jfA" comment="" name="EDW_Username" prompt="EDW_Username?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb9CY4Eeqys_dZkW9jfA" comment="" name="EDW_Password" prompt="EDW_Password?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb9SY4Eeqys_dZkW9jfA" comment="" name="SH_RR_Host" prompt="SH_RR_Host?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb9iY4Eeqys_dZkW9jfA" comment="" name="SH_Port" prompt="SH_Port?" promptNeeded="false" type="id_Long" value=""/>
+  <contextParameter xmi:id="_nStb9yY4Eeqys_dZkW9jfA" comment="" name="SH_Database" prompt="SH_Database?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb-CY4Eeqys_dZkW9jfA" comment="" name="SH_Username" prompt="SH_Username?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb-SY4Eeqys_dZkW9jfA" comment="" name="SH_Password" prompt="SH_Password?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_w_0_gD64Eeq31Yi6BjqvRw" comment="" name="EDW_Schema" prompt="EDW_Schema?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_w_0_gT64Eeq31Yi6BjqvRw" comment="" name="SendMailFrom" prompt="SendMailFrom?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_w_0_gj64Eeq31Yi6BjqvRw" comment="" name="SendMailUsername" prompt="SendMailUsername?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_w_0_gz64Eeq31Yi6BjqvRw" comment="" name="SendMailPassword" prompt="SendMailPassword?" promptNeeded="false" type="id_String" value=""/>
 </talendfile:ContextType>

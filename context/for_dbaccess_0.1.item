@@ -13,4 +13,7 @@
   <contextParameter xmi:id="_sJ8ikCY2Eeqys_dZkW9jfA" comment="" name="accesskey" prompt="accesskey?" promptNeeded="false" type="id_String" value="&quot;AKIA4XY6DFDCB3QNGL7M&quot;"/>
   <contextParameter xmi:id="_vkI14CZUEeqys_dZkW9jfA" comment="" name="secretkey" prompt="secretkey?" promptNeeded="false" type="id_Password" value="yt/mhHknSvIGNKmHIRInSYA4RhHZf/9A5pqnO4Htqa3gZKIJSDS/sGAqaA3PQgg8"/>
   <contextParameter xmi:id="_jW3YQDH7EeqisbJkNHXblg" comment="" name="EDW_Schema" prompt="EDW_Schema?" promptNeeded="false" type="id_String" value="&quot;tj_dwh_prod&quot;"/>
+  <contextParameter xmi:id="_rV3_UD62Eeq31Yi6BjqvRw" comment="" name="SendMailFrom" prompt="SendMailFrom?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_rV3_UT62Eeq31Yi6BjqvRw" comment="" name="SendMailUsername" prompt="SendMailUsername?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_LFucQD63Eeq31Yi6BjqvRw" comment="" name="SendMailPassword" prompt="SendMailPassword?" promptNeeded="false" type="id_String" value=""/>
 </talendfile:ContextType>

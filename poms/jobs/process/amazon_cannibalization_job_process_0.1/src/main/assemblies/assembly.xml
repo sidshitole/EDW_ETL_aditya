@@ -214,7 +214,10 @@
 			<outputDirectory>lib</outputDirectory>
 			<includes>
 				<include>org.example.edw_etl_aditya.code:routines</include>
+				<include>org.talend.libraries:advancedPersistentLookupLib-1.2</include>
+				<include>org.talend.libraries:jboss-serialization</include>
 				<include>org.talend.libraries:mysql-connector-java-5.1.30-bin</include>
+				<include>org.talend.libraries:trove</include>
 			</includes>
 			<!-- without version for talend libraries -->
 			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}
@@ -224,6 +227,7 @@
 		<dependencySet>
 			<outputDirectory>lib</outputDirectory>
 			<includes>
+				<include>commons-collections:commons-collections</include>
 				<include>dom4j:dom4j</include>
 				<include>log4j:log4j</include>
 				<include>com.amazon.redshift:redshift-jdbc42-no-awssdk</include>
