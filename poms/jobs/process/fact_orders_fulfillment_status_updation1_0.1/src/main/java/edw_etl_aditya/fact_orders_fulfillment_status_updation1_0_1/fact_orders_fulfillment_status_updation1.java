@@ -503,6 +503,17 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 		}
 	}
 
+	public void tDBBulkExec_2_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tDBBulkExec_2_onSubJobError(exception, errorComponent, globalMap);
+	}
+
 	public void tDBConnection_1_error(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
@@ -580,15 +591,15 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 		tS3Put_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tDBBulkExec_2_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
+	public void tDBBulkExec_2_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
-		end_Hash.put(errorComponent, System.currentTimeMillis());
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
 
-		status = "failure";
-
-		tDBBulkExec_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tDBConnection_1_onSubJobError(Exception exception,
@@ -657,15 +668,219 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 
 	}
 
-	public void tDBBulkExec_2_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
+	public void tDBBulkExec_2Process(
+			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
+		globalMap.put("tDBBulkExec_2_SUBPROCESS_STATE", 0);
 
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
+		final boolean execStat = this.execStat;
 
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tDBBulkExec_2 begin ] start
+				 */
+
+				ok_Hash.put("tDBBulkExec_2", false);
+				start_Hash.put("tDBBulkExec_2", System.currentTimeMillis());
+
+				currentComponent = "tDBBulkExec_2";
+
+				int tos_count_tDBBulkExec_2 = 0;
+
+				String dbschema_tDBBulkExec_2 = null;
+
+				dbschema_tDBBulkExec_2 = (String) globalMap.get("schema_"
+						+ "tDBConnection_2");
+
+				String tableName_tDBBulkExec_2 = "netsuite_fulfillmentstatus";
+				String tableName2_tDBBulkExec_2 = tableName_tDBBulkExec_2;
+				boolean isTempTable_tDBBulkExec_2 = tableName_tDBBulkExec_2 != null
+						&& tableName_tDBBulkExec_2.trim().startsWith("#");
+				if (isTempTable_tDBBulkExec_2) {
+					tableName2_tDBBulkExec_2 = "\"" + tableName2_tDBBulkExec_2
+							+ "\"";
+				} else if (dbschema_tDBBulkExec_2 == null
+						|| dbschema_tDBBulkExec_2.trim().length() == 0) {
+					// do nothing
+				} else {
+					tableName_tDBBulkExec_2 = dbschema_tDBBulkExec_2 + "\".\""
+							+ tableName_tDBBulkExec_2;
+					tableName2_tDBBulkExec_2 = dbschema_tDBBulkExec_2 + "."
+							+ tableName2_tDBBulkExec_2;
+				}
+
+				java.sql.Connection conn_tDBBulkExec_2 = null;
+				conn_tDBBulkExec_2 = (java.sql.Connection) globalMap
+						.get("conn_tDBConnection_2");
+
+				java.sql.DatabaseMetaData dbMetaData_tDBBulkExec_2 = conn_tDBBulkExec_2
+						.getMetaData();
+				java.sql.ResultSet rsTable_tDBBulkExec_2 = dbMetaData_tDBBulkExec_2
+						.getTables(null, dbschema_tDBBulkExec_2, null,
+								new String[] { "TABLE" });
+				boolean whetherExist_tDBBulkExec_2 = false;
+				while (rsTable_tDBBulkExec_2.next()) {
+					if (rsTable_tDBBulkExec_2.getString("TABLE_NAME")
+							.equalsIgnoreCase("netsuite_fulfillmentstatus")) {
+						whetherExist_tDBBulkExec_2 = true;
+						break;
+					}
+				}
+				rsTable_tDBBulkExec_2.close();
+				if (whetherExist_tDBBulkExec_2) {
+					java.sql.Statement stmtDrop_tDBBulkExec_2 = conn_tDBBulkExec_2
+							.createStatement();
+
+					stmtDrop_tDBBulkExec_2.execute("DROP TABLE \""
+							+ tableName_tDBBulkExec_2 + "\"");
+
+					stmtDrop_tDBBulkExec_2.close();
+				}
+				java.sql.Statement stmtCreate_tDBBulkExec_2 = conn_tDBBulkExec_2
+						.createStatement();
+
+				stmtCreate_tDBBulkExec_2
+						.execute("CREATE TABLE \""
+								+ tableName_tDBBulkExec_2
+								+ "\"(\"shopify_order_id\" VARCHAR(200)  ,\"status\" VARCHAR(200)  ,\"transaction_at\" TIMESTAMP )");
+
+				stmtCreate_tDBBulkExec_2.close();
+
+				// in mysql when autoCommit=true don't commit.
+				if (!conn_tDBBulkExec_2.getAutoCommit()) {
+					conn_tDBBulkExec_2.commit();
+				}
+
+				StringBuilder command_tDBBulkExec_2 = new StringBuilder();
+				char fieldSeparator_tDBBulkExec_2 = String.valueOf(',').charAt(
+						0);
+				char textEnclosure_tDBBulkExec_2 = '\0';
+
+				command_tDBBulkExec_2.append("COPY ").append("\"")
+						.append(tableName_tDBBulkExec_2).append("\"")
+
+						.append(" (").append("shopify_order_id").append(",")
+						.append("status").append(",").append("transaction_at")
+						.append(")").append(" FROM '");
+
+				final String decryptedPwd_tDBBulkExec_2 = context.secretkey;
+
+				command_tDBBulkExec_2.append("s3://").append("tj-redshift-edw")
+						.append("/").append("EDW_RW/orderams.csv")
+						.append("' credentials '").append("aws_access_key_id=")
+						.append(context.accesskey)
+						.append(";aws_secret_access_key=")
+						.append(decryptedPwd_tDBBulkExec_2).append("' ")
+						.append("DELIMITER '")
+						.append(fieldSeparator_tDBBulkExec_2).append("' ");
+				if (textEnclosure_tDBBulkExec_2 != '\0') {
+					command_tDBBulkExec_2.append("CSV QUOTE '")
+							.append(textEnclosure_tDBBulkExec_2).append("' ");
+				}
+				command_tDBBulkExec_2.append("ENCODING ").append("UTF8")
+						.append(" ");
+				java.sql.Statement stmt_tDBBulkExec_2 = conn_tDBBulkExec_2
+						.createStatement();
+				stmt_tDBBulkExec_2.execute(command_tDBBulkExec_2.toString());
+
+				/**
+				 * [tDBBulkExec_2 begin ] stop
+				 */
+
+				/**
+				 * [tDBBulkExec_2 main ] start
+				 */
+
+				currentComponent = "tDBBulkExec_2";
+
+				tos_count_tDBBulkExec_2++;
+
+				/**
+				 * [tDBBulkExec_2 main ] stop
+				 */
+
+				/**
+				 * [tDBBulkExec_2 process_data_begin ] start
+				 */
+
+				currentComponent = "tDBBulkExec_2";
+
+				/**
+				 * [tDBBulkExec_2 process_data_begin ] stop
+				 */
+
+				/**
+				 * [tDBBulkExec_2 process_data_end ] start
+				 */
+
+				currentComponent = "tDBBulkExec_2";
+
+				/**
+				 * [tDBBulkExec_2 process_data_end ] stop
+				 */
+
+				/**
+				 * [tDBBulkExec_2 end ] start
+				 */
+
+				currentComponent = "tDBBulkExec_2";
+
+				ok_Hash.put("tDBBulkExec_2", true);
+				end_Hash.put("tDBBulkExec_2", System.currentTimeMillis());
+
+				/**
+				 * [tDBBulkExec_2 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tDBBulkExec_2 finally ] start
+				 */
+
+				currentComponent = "tDBBulkExec_2";
+
+				/**
+				 * [tDBBulkExec_2 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tDBBulkExec_2_SUBPROCESS_STATE", 1);
 	}
 
 	public void tDBConnection_1Process(
@@ -1303,22 +1518,22 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 		final static byte[] commonByteArrayLock_EDW_ETL_ADITYA_fact_orders_fulfillment_status_updation1 = new byte[0];
 		static byte[] commonByteArray_EDW_ETL_ADITYA_fact_orders_fulfillment_status_updation1 = new byte[0];
 
-		public String sh_order_id;
+		public String shopify_order_id;
 
-		public String getSh_order_id() {
-			return this.sh_order_id;
+		public String getShopify_order_id() {
+			return this.shopify_order_id;
 		}
 
-		public String consolidated_file_name;
+		public String status;
 
-		public String getConsolidated_file_name() {
-			return this.consolidated_file_name;
+		public String getStatus() {
+			return this.status;
 		}
 
-		public java.util.Date updated_at;
+		public java.util.Date transaction_at;
 
-		public java.util.Date getUpdated_at() {
-			return this.updated_at;
+		public java.util.Date getTransaction_at() {
+			return this.transaction_at;
 		}
 
 		private String readString(ObjectInputStream dis) throws IOException {
@@ -1388,11 +1603,11 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 
 					int length = 0;
 
-					this.sh_order_id = readString(dis);
+					this.shopify_order_id = readString(dis);
 
-					this.consolidated_file_name = readString(dis);
+					this.status = readString(dis);
 
-					this.updated_at = readDate(dis);
+					this.transaction_at = readDate(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1408,15 +1623,15 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 
 				// String
 
-				writeString(this.sh_order_id, dos);
+				writeString(this.shopify_order_id, dos);
 
 				// String
 
-				writeString(this.consolidated_file_name, dos);
+				writeString(this.status, dos);
 
 				// java.util.Date
 
-				writeDate(this.updated_at, dos);
+				writeDate(this.transaction_at, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -1429,9 +1644,9 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("sh_order_id=" + sh_order_id);
-			sb.append(",consolidated_file_name=" + consolidated_file_name);
-			sb.append(",updated_at=" + String.valueOf(updated_at));
+			sb.append("shopify_order_id=" + shopify_order_id);
+			sb.append(",status=" + status);
+			sb.append(",transaction_at=" + String.valueOf(transaction_at));
 			sb.append("]");
 
 			return sb.toString();
@@ -1631,9 +1846,9 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 				java.sql.Statement stmt_tDBInput_9 = conn_tDBInput_9
 						.createStatement();
 
-				String dbquery_tDBInput_9 = "select distinct fl.sh_order_id, l.consolidated_file_name, l.updated_at\nfrom mw_integration.ams_ftp_process_log l join m"
-						+ "w_integration.ams_ftp_ledger fl\non l.generated_ftp_file_name = fl.csv_name where fl.sh_order_id like 'SH%'\norder by fl.i"
-						+ "d";
+				String dbquery_tDBInput_9 = "select b.shopify_order_id, a.status, a.transaction_at\nfrom netsuite_staging.sales_orders a join (select transaction_id,"
+						+ " shopify_order_id from netsuite_staging.sales_orders\nwhere shopify_order_id like 'SH%' and netsuite_order_number like 'S"
+						+ "O%') b\non a.created_from_id = b.transaction_id\nwhere a.netsuite_order_number like 'IF%';";
 
 				globalMap.put("tDBInput_9_QUERY", dbquery_tDBInput_9);
 				java.sql.ResultSet rs_tDBInput_9 = null;
@@ -1652,21 +1867,21 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 						nb_line_tDBInput_9++;
 
 						if (colQtyInRs_tDBInput_9 < 1) {
-							row2.sh_order_id = null;
+							row2.shopify_order_id = null;
 						} else {
 
-							row2.sh_order_id = routines.system.JDBCUtil
+							row2.shopify_order_id = routines.system.JDBCUtil
 									.getString(rs_tDBInput_9, 1, false);
 						}
 						if (colQtyInRs_tDBInput_9 < 2) {
-							row2.consolidated_file_name = null;
+							row2.status = null;
 						} else {
 
-							row2.consolidated_file_name = routines.system.JDBCUtil
-									.getString(rs_tDBInput_9, 2, false);
+							row2.status = routines.system.JDBCUtil.getString(
+									rs_tDBInput_9, 2, false);
 						}
 						if (colQtyInRs_tDBInput_9 < 3) {
-							row2.updated_at = null;
+							row2.transaction_at = null;
 						} else {
 
 							if (rs_tDBInput_9.getString(3) != null) {
@@ -1676,14 +1891,14 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 										.equals(dateString_tDBInput_9)
 										&& !("0000-00-00 00:00:00")
 												.equals(dateString_tDBInput_9)) {
-									row2.updated_at = rs_tDBInput_9
+									row2.transaction_at = rs_tDBInput_9
 											.getTimestamp(3);
 								} else {
-									row2.updated_at = (java.util.Date) year0_tDBInput_9
+									row2.transaction_at = (java.util.Date) year0_tDBInput_9
 											.clone();
 								}
 							} else {
-								row2.updated_at = null;
+								row2.transaction_at = null;
 							}
 						}
 
@@ -1728,20 +1943,20 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 						}
 
 						StringBuilder sb_tFileOutputDelimited_2 = new StringBuilder();
-						if (row2.sh_order_id != null) {
-							sb_tFileOutputDelimited_2.append(row2.sh_order_id);
-						}
-						sb_tFileOutputDelimited_2
-								.append(OUT_DELIM_tFileOutputDelimited_2);
-						if (row2.consolidated_file_name != null) {
+						if (row2.shopify_order_id != null) {
 							sb_tFileOutputDelimited_2
-									.append(row2.consolidated_file_name);
+									.append(row2.shopify_order_id);
 						}
 						sb_tFileOutputDelimited_2
 								.append(OUT_DELIM_tFileOutputDelimited_2);
-						if (row2.updated_at != null) {
+						if (row2.status != null) {
+							sb_tFileOutputDelimited_2.append(row2.status);
+						}
+						sb_tFileOutputDelimited_2
+								.append(OUT_DELIM_tFileOutputDelimited_2);
+						if (row2.transaction_at != null) {
 							sb_tFileOutputDelimited_2.append(FormatterUtils
-									.format_Date(row2.updated_at,
+									.format_Date(row2.transaction_at,
 											"yyyy-MM-dd HH:mm:ss"));
 						}
 						sb_tFileOutputDelimited_2
@@ -2188,221 +2403,6 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 		}
 
 		globalMap.put("tS3Put_2_SUBPROCESS_STATE", 1);
-	}
-
-	public void tDBBulkExec_2Process(
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tDBBulkExec_2_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception()
-						.getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tDBBulkExec_2 begin ] start
-				 */
-
-				ok_Hash.put("tDBBulkExec_2", false);
-				start_Hash.put("tDBBulkExec_2", System.currentTimeMillis());
-
-				currentComponent = "tDBBulkExec_2";
-
-				int tos_count_tDBBulkExec_2 = 0;
-
-				String dbschema_tDBBulkExec_2 = null;
-
-				dbschema_tDBBulkExec_2 = (String) globalMap.get("schema_"
-						+ "tDBConnection_2");
-
-				String tableName_tDBBulkExec_2 = "order_ams";
-				String tableName2_tDBBulkExec_2 = tableName_tDBBulkExec_2;
-				boolean isTempTable_tDBBulkExec_2 = tableName_tDBBulkExec_2 != null
-						&& tableName_tDBBulkExec_2.trim().startsWith("#");
-				if (isTempTable_tDBBulkExec_2) {
-					tableName2_tDBBulkExec_2 = "\"" + tableName2_tDBBulkExec_2
-							+ "\"";
-				} else if (dbschema_tDBBulkExec_2 == null
-						|| dbschema_tDBBulkExec_2.trim().length() == 0) {
-					// do nothing
-				} else {
-					tableName_tDBBulkExec_2 = dbschema_tDBBulkExec_2 + "\".\""
-							+ tableName_tDBBulkExec_2;
-					tableName2_tDBBulkExec_2 = dbschema_tDBBulkExec_2 + "."
-							+ tableName2_tDBBulkExec_2;
-				}
-
-				java.sql.Connection conn_tDBBulkExec_2 = null;
-				conn_tDBBulkExec_2 = (java.sql.Connection) globalMap
-						.get("conn_tDBConnection_2");
-
-				java.sql.DatabaseMetaData dbMetaData_tDBBulkExec_2 = conn_tDBBulkExec_2
-						.getMetaData();
-				java.sql.ResultSet rsTable_tDBBulkExec_2 = dbMetaData_tDBBulkExec_2
-						.getTables(null, dbschema_tDBBulkExec_2, null,
-								new String[] { "TABLE" });
-				boolean whetherExist_tDBBulkExec_2 = false;
-				while (rsTable_tDBBulkExec_2.next()) {
-					if (rsTable_tDBBulkExec_2.getString("TABLE_NAME")
-							.equalsIgnoreCase("order_ams")) {
-						whetherExist_tDBBulkExec_2 = true;
-						break;
-					}
-				}
-				rsTable_tDBBulkExec_2.close();
-				if (whetherExist_tDBBulkExec_2) {
-					java.sql.Statement stmtDrop_tDBBulkExec_2 = conn_tDBBulkExec_2
-							.createStatement();
-
-					stmtDrop_tDBBulkExec_2.execute("DROP TABLE \""
-							+ tableName_tDBBulkExec_2 + "\"");
-
-					stmtDrop_tDBBulkExec_2.close();
-				}
-				java.sql.Statement stmtCreate_tDBBulkExec_2 = conn_tDBBulkExec_2
-						.createStatement();
-
-				stmtCreate_tDBBulkExec_2
-						.execute("CREATE TABLE \""
-								+ tableName_tDBBulkExec_2
-								+ "\"(\"sh_order_id\" VARCHAR(200)  ,\"consolidated_file_name\" VARCHAR(200)  ,\"ams_updated_at\" TIMESTAMP )");
-
-				stmtCreate_tDBBulkExec_2.close();
-
-				// in mysql when autoCommit=true don't commit.
-				if (!conn_tDBBulkExec_2.getAutoCommit()) {
-					conn_tDBBulkExec_2.commit();
-				}
-
-				StringBuilder command_tDBBulkExec_2 = new StringBuilder();
-				char fieldSeparator_tDBBulkExec_2 = String.valueOf(',').charAt(
-						0);
-				char textEnclosure_tDBBulkExec_2 = '\0';
-
-				command_tDBBulkExec_2.append("COPY ").append("\"")
-						.append(tableName_tDBBulkExec_2).append("\"")
-
-						.append(" (").append("sh_order_id").append(",")
-						.append("consolidated_file_name").append(",")
-						.append("ams_updated_at").append(")").append(" FROM '");
-
-				final String decryptedPwd_tDBBulkExec_2 = context.secretkey;
-
-				command_tDBBulkExec_2.append("s3://").append("tj-redshift-edw")
-						.append("/").append("EDW_RW/orderams.csv")
-						.append("' credentials '").append("aws_access_key_id=")
-						.append(context.accesskey)
-						.append(";aws_secret_access_key=")
-						.append(decryptedPwd_tDBBulkExec_2).append("' ")
-						.append("DELIMITER '")
-						.append(fieldSeparator_tDBBulkExec_2).append("' ");
-				if (textEnclosure_tDBBulkExec_2 != '\0') {
-					command_tDBBulkExec_2.append("CSV QUOTE '")
-							.append(textEnclosure_tDBBulkExec_2).append("' ");
-				}
-				command_tDBBulkExec_2.append("ENCODING ").append("UTF8")
-						.append(" ");
-				java.sql.Statement stmt_tDBBulkExec_2 = conn_tDBBulkExec_2
-						.createStatement();
-				stmt_tDBBulkExec_2.execute(command_tDBBulkExec_2.toString());
-
-				/**
-				 * [tDBBulkExec_2 begin ] stop
-				 */
-
-				/**
-				 * [tDBBulkExec_2 main ] start
-				 */
-
-				currentComponent = "tDBBulkExec_2";
-
-				tos_count_tDBBulkExec_2++;
-
-				/**
-				 * [tDBBulkExec_2 main ] stop
-				 */
-
-				/**
-				 * [tDBBulkExec_2 process_data_begin ] start
-				 */
-
-				currentComponent = "tDBBulkExec_2";
-
-				/**
-				 * [tDBBulkExec_2 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tDBBulkExec_2 process_data_end ] start
-				 */
-
-				currentComponent = "tDBBulkExec_2";
-
-				/**
-				 * [tDBBulkExec_2 process_data_end ] stop
-				 */
-
-				/**
-				 * [tDBBulkExec_2 end ] start
-				 */
-
-				currentComponent = "tDBBulkExec_2";
-
-				ok_Hash.put("tDBBulkExec_2", true);
-				end_Hash.put("tDBBulkExec_2", System.currentTimeMillis());
-
-				/**
-				 * [tDBBulkExec_2 end ] stop
-				 */
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tDBBulkExec_2 finally ] start
-				 */
-
-				currentComponent = "tDBBulkExec_2";
-
-				/**
-				 * [tDBBulkExec_2 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tDBBulkExec_2_SUBPROCESS_STATE", 1);
 	}
 
 	public String resuming_logs_dir_path = null;
@@ -3010,6 +3010,6 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 85960 characters generated by Talend Open Studio for Data Integration on the
- * 24 January, 2020 4:59:19 PM IST
+ * 85991 characters generated by Talend Open Studio for Data Integration on the
+ * 27 January, 2020 4:55:26 PM IST
  ************************************************************************************************/

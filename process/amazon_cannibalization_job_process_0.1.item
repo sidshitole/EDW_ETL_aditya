@@ -3,15 +3,15 @@
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="EDW_Database" prompt="EDW_Database?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_String" value=""/>
     <contextParameter comment="" name="EDW_Host" prompt="EDW_Host?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_String" value=""/>
-    <contextParameter comment="" name="EDW_Password" prompt="EDW_Password?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_String" value=""/>
+    <contextParameter comment="" name="EDW_Password" prompt="EDW_Password?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_Password" value=""/>
     <contextParameter comment="" name="EDW_Port" prompt="EDW_Port?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_Long" value=""/>
     <contextParameter comment="" name="EDW_Schema" prompt="EDW_Schema?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_String" value=""/>
     <contextParameter comment="" name="EDW_Username" prompt="EDW_Username?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_String" value=""/>
     <contextParameter comment="" name="SendMailFrom" prompt="SendMailFrom?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_String" value=""/>
-    <contextParameter comment="" name="SendMailPassword" prompt="SendMailPassword?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_String" value=""/>
+    <contextParameter comment="" name="SendMailPassword" prompt="SendMailPassword?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_Password" value=""/>
     <contextParameter comment="" name="SendMailUsername" prompt="SendMailUsername?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_String" value=""/>
     <contextParameter comment="" name="SH_Database" prompt="SH_Database?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_String" value=""/>
-    <contextParameter comment="" name="SH_Password" prompt="SH_Password?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_String" value=""/>
+    <contextParameter comment="" name="SH_Password" prompt="SH_Password?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_Password" value=""/>
     <contextParameter comment="" name="SH_Port" prompt="SH_Port?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_Long" value=""/>
     <contextParameter comment="" name="SH_RR_Host" prompt="SH_RR_Host?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_String" value=""/>
     <contextParameter comment="" name="SH_Username" prompt="SH_Username?" promptNeeded="false" repositoryContextId="_QxPqwBaNEeqplOs1CKPvAw" type="id_String" value=""/>
@@ -1260,7 +1260,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPrejob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
@@ -1271,7 +1271,7 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>

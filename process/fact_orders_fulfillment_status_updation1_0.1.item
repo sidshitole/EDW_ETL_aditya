@@ -476,7 +476,7 @@
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;order_ams&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;netsuite_fulfillmentstatus&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" value="redshift_id" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_SOURCE_TYPE" value="S3"/>
@@ -516,9 +516,9 @@
     <elementParameter field="CLOSED_LIST" name="JDBC_URL" value="STANDARD" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBBulkExec_2">
-      <column comment="" key="false" length="200" name="sh_order_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="19" usefulColumn="true"/>
-      <column comment="" key="false" length="200" name="consolidated_file_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="200" usefulColumn="true"/>
-      <column comment="" key="false" length="29" name="ams_updated_at" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="200" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="shopify_order_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="19" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="200" usefulColumn="true"/>
+      <column comment="" key="false" length="29" name="transaction_at" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="200" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tRedshiftCommit" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="672">
@@ -1046,12 +1046,12 @@
     <elementParameter field="TEXT" name="TYPE" value="MySQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
     <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;sales_orders&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select distinct fl.sh_order_id, l.consolidated_file_name, l.updated_at&#xA;from mw_integration.ams_ftp_process_log l join mw_integration.ams_ftp_ledger fl&#xA;on l.generated_ftp_file_name = fl.csv_name where fl.sh_order_id like 'SH%'&#xA;order by fl.id&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select b.shopify_order_id, a.status, a.transaction_at&#xA;from netsuite_staging.sales_orders a join (select transaction_id, shopify_order_id from netsuite_staging.sales_orders&#xA;where shopify_order_id like 'SH%' and netsuite_order_number like 'SO%') b&#xA;on a.created_from_id = b.transaction_id&#xA;where a.netsuite_order_number like 'IF%';&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1062,18 +1062,18 @@
     <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="sh_order_id"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="shopify_order_id"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="consolidated_file_name"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="status"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="updated_at"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="transaction_at"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_9">
-      <column comment="" key="false" length="200" name="sh_order_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="19" usefulColumn="true"/>
-      <column comment="" key="false" length="200" name="consolidated_file_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="200" usefulColumn="true"/>
-      <column comment="" key="false" length="29" name="updated_at" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="29" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="shopify_order_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="19" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="200" usefulColumn="true"/>
+      <column comment="" key="false" length="29" name="transaction_at" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="29" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1056" posY="544">
@@ -1107,9 +1107,9 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_2">
-      <column comment="" key="false" length="200" name="sh_order_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="19" usefulColumn="true"/>
-      <column comment="" key="false" length="200" name="consolidated_file_name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="200" usefulColumn="true"/>
-      <column comment="" key="false" length="29" name="updated_at" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="29" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="shopify_order_id" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="19" usefulColumn="true"/>
+      <column comment="" key="false" length="200" name="status" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="200" usefulColumn="true"/>
+      <column comment="" key="false" length="29" name="transaction_at" nullable="true" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="29" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tRedshiftInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="800" posY="160">

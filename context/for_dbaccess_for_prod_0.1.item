@@ -4,14 +4,16 @@
   <contextParameter xmi:id="_nStb8SY4Eeqys_dZkW9jfA" comment="" name="EDW_Port" prompt="EDW_Port?" promptNeeded="false" type="id_Long" value=""/>
   <contextParameter xmi:id="_nStb8iY4Eeqys_dZkW9jfA" comment="" name="EDW_Database" prompt="EDW_Database?" promptNeeded="false" type="id_String" value=""/>
   <contextParameter xmi:id="_nStb8yY4Eeqys_dZkW9jfA" comment="" name="EDW_Username" prompt="EDW_Username?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_nStb9CY4Eeqys_dZkW9jfA" comment="" name="EDW_Password" prompt="EDW_Password?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb9CY4Eeqys_dZkW9jfA" comment="" name="EDW_Password" prompt="EDW_Password?" promptNeeded="false" type="id_Password" value=""/>
   <contextParameter xmi:id="_nStb9SY4Eeqys_dZkW9jfA" comment="" name="SH_RR_Host" prompt="SH_RR_Host?" promptNeeded="false" type="id_String" value=""/>
   <contextParameter xmi:id="_nStb9iY4Eeqys_dZkW9jfA" comment="" name="SH_Port" prompt="SH_Port?" promptNeeded="false" type="id_Long" value=""/>
   <contextParameter xmi:id="_nStb9yY4Eeqys_dZkW9jfA" comment="" name="SH_Database" prompt="SH_Database?" promptNeeded="false" type="id_String" value=""/>
   <contextParameter xmi:id="_nStb-CY4Eeqys_dZkW9jfA" comment="" name="SH_Username" prompt="SH_Username?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_nStb-SY4Eeqys_dZkW9jfA" comment="" name="SH_Password" prompt="SH_Password?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_nStb-SY4Eeqys_dZkW9jfA" comment="" name="SH_Password" prompt="SH_Password?" promptNeeded="false" type="id_Password" value=""/>
   <contextParameter xmi:id="_w_0_gD64Eeq31Yi6BjqvRw" comment="" name="EDW_Schema" prompt="EDW_Schema?" promptNeeded="false" type="id_String" value=""/>
   <contextParameter xmi:id="_w_0_gT64Eeq31Yi6BjqvRw" comment="" name="SendMailFrom" prompt="SendMailFrom?" promptNeeded="false" type="id_String" value=""/>
   <contextParameter xmi:id="_w_0_gj64Eeq31Yi6BjqvRw" comment="" name="SendMailUsername" prompt="SendMailUsername?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_w_0_gz64Eeq31Yi6BjqvRw" comment="" name="SendMailPassword" prompt="SendMailPassword?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_w_0_gz64Eeq31Yi6BjqvRw" comment="" name="SendMailPassword" prompt="SendMailPassword?" promptNeeded="false" type="id_Password" value=""/>
+  <contextParameter xmi:id="_JvNqAEDgEeqt74izmvl7yA" comment="" name="SMTP_Host" prompt="SMTP_Host?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_JvNqAUDgEeqt74izmvl7yA" comment="" name="SMTP_Port" prompt="SMTP_Port?" promptNeeded="false" type="id_String" value=""/>
 </talendfile:ContextType>
