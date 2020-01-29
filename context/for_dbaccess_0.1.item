@@ -16,4 +16,9 @@
   <contextParameter xmi:id="_rV3_UD62Eeq31Yi6BjqvRw" comment="" name="SendMailFrom" prompt="SendMailFrom?" promptNeeded="false" type="id_String" value=""/>
   <contextParameter xmi:id="_rV3_UT62Eeq31Yi6BjqvRw" comment="" name="SendMailUsername" prompt="SendMailUsername?" promptNeeded="false" type="id_String" value=""/>
   <contextParameter xmi:id="_LFucQD63Eeq31Yi6BjqvRw" comment="" name="SendMailPassword" prompt="SendMailPassword?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_yXp4MEGkEeqZyuXdVUOy4A" comment="" name="accesskeyswap" prompt="accesskeyswap?" promptNeeded="false" type="id_String" value="&quot;AKIAJAYBQPKQDJ4HL4AQ&quot;"/>
+  <contextParameter xmi:id="_yXp4MUGkEeqZyuXdVUOy4A" comment="" name="secretkeyswap" prompt="secretkeyswap?" promptNeeded="false" type="id_Password" value="8/HC10MtQM6u1qWsFxM0rWqhue5uADnDGvH3Fmx8SIDm2eFzsj2VJFWl8kDEDd7b"/>
+  <contextParameter xmi:id="_xTmIMEJqEeqRXP-4AdFQiQ" comment="" name="SendMailTo" prompt="SendMailTo?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_xTmIMUJqEeqRXP-4AdFQiQ" comment="" name="SMTP_Host" prompt="SMTP_Host?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_xTmIMkJqEeqRXP-4AdFQiQ" comment="" name="SMTP_Port" prompt="SMTP_Port?" promptNeeded="false" type="id_String" value=""/>
 </talendfile:ContextType>

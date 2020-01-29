@@ -16,4 +16,13 @@
   <contextParameter xmi:id="_w_0_gz64Eeq31Yi6BjqvRw" comment="" name="SendMailPassword" prompt="SendMailPassword?" promptNeeded="false" type="id_Password" value=""/>
   <contextParameter xmi:id="_JvNqAEDgEeqt74izmvl7yA" comment="" name="SMTP_Host" prompt="SMTP_Host?" promptNeeded="false" type="id_String" value=""/>
   <contextParameter xmi:id="_JvNqAUDgEeqt74izmvl7yA" comment="" name="SMTP_Port" prompt="SMTP_Port?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_HJK8EEJlEeqRXP-4AdFQiQ" comment="" name="DS_Host" prompt="DS_Host?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_HJLjIEJlEeqRXP-4AdFQiQ" comment="" name="DS_Port" prompt="DS_Port?" promptNeeded="false" type="id_Long" value=""/>
+  <contextParameter xmi:id="_HJLjIUJlEeqRXP-4AdFQiQ" comment="" name="DS_Database" prompt="DS_Database?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_HJLjIkJlEeqRXP-4AdFQiQ" comment="" name="DS_Username" prompt="DS_Username?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_HJLjI0JlEeqRXP-4AdFQiQ" comment="" name="DS_Password" prompt="DS_Password?" promptNeeded="false" type="id_Password" value=""/>
+  <contextParameter xmi:id="_HJLjJEJlEeqRXP-4AdFQiQ" comment="" name="DS_Schema" prompt="DS_Schema?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_LRZgQEJmEeqRXP-4AdFQiQ" comment="" name="DS_Access_key" prompt="DS_Access_key?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_LRZgQUJmEeqRXP-4AdFQiQ" comment="" name="DS_Secret_key" prompt="DS_Secret_key?" promptNeeded="false" type="id_String" value=""/>
+  <contextParameter xmi:id="_4RsiwEJqEeqRXP-4AdFQiQ" comment="" name="SendMailTo" prompt="SendMailTo?" promptNeeded="false" type="id_String" value=""/>
 </talendfile:ContextType>

@@ -41,6 +41,8 @@
     <module>jobs/process/zendesk_tickets_0.1</module>
     <module>jobs/process/dim_amazon_customers_0.1</module>
     <module>jobs/process/amazon_cannibalization_job_process_0.1</module>
+    <module>jobs/process/customer_churn_0.1</module>
+    <module>jobs/process/customer_churn_output_0.1</module>
   </modules>
   <properties>
     <talend.project.name>EDW_ETL_ADITYA</talend.project.name>
