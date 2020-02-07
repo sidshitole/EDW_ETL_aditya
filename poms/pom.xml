@@ -43,6 +43,10 @@
     <module>jobs/process/amazon_cannibalization_job_process_0.1</module>
     <module>jobs/process/customer_churn_0.1</module>
     <module>jobs/process/customer_churn_output_0.1</module>
+    <module>jobs/process/Shopify/edw_etl_ams_order_status_update_0.1</module>
+    <module>jobs/process/Shopify/edw_etl_ams_order_status_insert_0.1</module>
+    <module>jobs/process/AMS_NS_Shopify_Status/ams_order_data_from_instance_to_db_job_0.1</module>
+    <module>jobs/process/fact_orders_fulfillment_status_titlecode_upadte_0.1</module>
   </modules>
   <properties>
     <talend.project.name>EDW_ETL_ADITYA</talend.project.name>

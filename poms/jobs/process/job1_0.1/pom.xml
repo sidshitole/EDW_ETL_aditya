@@ -28,7 +28,7 @@
     <talend.pigudf.groupid>org.example.edw_etl_aditya.pigudf</talend.pigudf.groupid>
     <talend.routine.groupid>org.example.edw_etl_aditya.code</talend.routine.groupid>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
-    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms256M -Xmx5120M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
     <talend.job.context>Default</talend.job.context>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
@@ -56,6 +56,11 @@
       <groupId>org.talend.libraries</groupId>
       <artifactId>mysql-connector-java-5.1.30-bin</artifactId>
       <version>6.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.amazon.redshift</groupId>
+      <artifactId>redshift-jdbc42-no-awssdk</artifactId>
+      <version>1.2.16.1027</version>
     </dependency>
     <dependency>
       <groupId>org.example.edw_etl_aditya.code</groupId>
