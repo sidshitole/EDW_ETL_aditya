@@ -685,7 +685,7 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 				dbschema_tDBBulkExec_2 = (String) globalMap.get("schema_"
 						+ "tDBConnection_2");
 
-				String tableName_tDBBulkExec_2 = "title_code";
+				String tableName_tDBBulkExec_2 = "capture_response_20200226";
 				String tableName2_tDBBulkExec_2 = tableName_tDBBulkExec_2;
 				boolean isTempTable_tDBBulkExec_2 = tableName_tDBBulkExec_2 != null
 						&& tableName_tDBBulkExec_2.trim().startsWith("#");
@@ -714,7 +714,7 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 				boolean whetherExist_tDBBulkExec_2 = false;
 				while (rsTable_tDBBulkExec_2.next()) {
 					if (rsTable_tDBBulkExec_2.getString("TABLE_NAME")
-							.equalsIgnoreCase("title_code")) {
+							.equalsIgnoreCase("capture_response_20200226")) {
 						whetherExist_tDBBulkExec_2 = true;
 						break;
 					}
@@ -735,7 +735,7 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 				stmtCreate_tDBBulkExec_2
 						.execute("CREATE TABLE \""
 								+ tableName_tDBBulkExec_2
-								+ "\"(\"order_id\" BIGINT ,\"title\" VARCHAR(200)  ,\"code\" VARCHAR(200)  )");
+								+ "\"(\"order_id\" BIGINT ,\"authorize\" VARCHAR(200)  )");
 
 				stmtCreate_tDBBulkExec_2.close();
 
@@ -753,8 +753,7 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 						.append(tableName_tDBBulkExec_2).append("\"")
 
 						.append(" (").append("order_id").append(",")
-						.append("title").append(",").append("code").append(")")
-						.append(" FROM '");
+						.append("authorize").append(")").append(" FROM '");
 
 				final String decryptedPwd_tDBBulkExec_2 = context.secretkey;
 
@@ -1343,16 +1342,10 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 			return this.order_id;
 		}
 
-		public String title;
+		public String authorize;
 
-		public String getTitle() {
-			return this.title;
-		}
-
-		public String code;
-
-		public String getCode() {
-			return this.code;
+		public String getAuthorize() {
+			return this.authorize;
 		}
 
 		private String readString(ObjectInputStream dis) throws IOException {
@@ -1406,9 +1399,7 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 						this.order_id = dis.readLong();
 					}
 
-					this.title = readString(dis);
-
-					this.code = readString(dis);
+					this.authorize = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1433,11 +1424,7 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 
 				// String
 
-				writeString(this.title, dos);
-
-				// String
-
-				writeString(this.code, dos);
+				writeString(this.authorize, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -1451,8 +1438,7 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 			sb.append(super.toString());
 			sb.append("[");
 			sb.append("order_id=" + String.valueOf(order_id));
-			sb.append(",title=" + title);
-			sb.append(",code=" + code);
+			sb.append(",authorize=" + authorize);
 			sb.append("]");
 
 			return sb.toString();
@@ -1652,8 +1638,7 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 				java.sql.Statement stmt_tDBInput_9 = conn_tDBInput_9
 						.createStatement();
 
-				String dbquery_tDBInput_9 = "select order_id, replace(title,',',';') as title, code \nfrom shopify_staging.orders_shipping_lines\nwhere date(shopify_c"
-						+ "reated_at) >= (SELECT date(DATE_SUB(now(), INTERVAL 12 day)))\norder by id;";
+				String dbquery_tDBInput_9 = "select order_id, authorization authorize\nfrom mw_integration.capture_response\norder by created_at desc;";
 
 				globalMap.put("tDBInput_9_QUERY", dbquery_tDBInput_9);
 				java.sql.ResultSet rs_tDBInput_9 = null;
@@ -1682,18 +1667,11 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 							}
 						}
 						if (colQtyInRs_tDBInput_9 < 2) {
-							row2.title = null;
+							row2.authorize = null;
 						} else {
 
-							row2.title = routines.system.JDBCUtil.getString(
-									rs_tDBInput_9, 2, false);
-						}
-						if (colQtyInRs_tDBInput_9 < 3) {
-							row2.code = null;
-						} else {
-
-							row2.code = routines.system.JDBCUtil.getString(
-									rs_tDBInput_9, 3, false);
+							row2.authorize = routines.system.JDBCUtil
+									.getString(rs_tDBInput_9, 2, false);
 						}
 
 						/**
@@ -1742,13 +1720,8 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 						}
 						sb_tFileOutputDelimited_2
 								.append(OUT_DELIM_tFileOutputDelimited_2);
-						if (row2.title != null) {
-							sb_tFileOutputDelimited_2.append(row2.title);
-						}
-						sb_tFileOutputDelimited_2
-								.append(OUT_DELIM_tFileOutputDelimited_2);
-						if (row2.code != null) {
-							sb_tFileOutputDelimited_2.append(row2.code);
+						if (row2.authorize != null) {
+							sb_tFileOutputDelimited_2.append(row2.authorize);
 						}
 						sb_tFileOutputDelimited_2
 								.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_2);
@@ -2783,6 +2756,6 @@ public class fact_orders_fulfillment_status_updation1 implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 79597 characters generated by Talend Open Studio for Data Integration on the
- * 5 February, 2020 6:16:09 PM IST
+ * 78787 characters generated by Talend Open Studio for Data Integration on the
+ * 26 February, 2020 3:23:49 PM IST
  ************************************************************************************************/

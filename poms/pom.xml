@@ -47,6 +47,7 @@
     <module>jobs/process/Shopify/edw_etl_ams_order_status_insert_0.1</module>
     <module>jobs/process/AMS_NS_Shopify_Status/ams_order_data_from_instance_to_db_job_0.1</module>
     <module>jobs/process/fact_orders_fulfillment_status_titlecode_upadte_0.1</module>
+    <module>jobs/process/job_process_for_shopify_inventory_by_variant_0.1</module>
   </modules>
   <properties>
     <talend.project.name>EDW_ETL_ADITYA</talend.project.name>

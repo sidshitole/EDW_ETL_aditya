@@ -549,7 +549,7 @@ public class job1 implements TalendJob {
 		tDBConnection_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tDBInput_5_error(Exception exception, String errorComponent,
+	public void tDBInput_6_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -557,10 +557,10 @@ public class job1 implements TalendJob {
 
 		status = "failure";
 
-		tDBInput_5_onSubJobError(exception, errorComponent, globalMap);
+		tDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tDBOutput_5_error(Exception exception, String errorComponent,
+	public void tDBOutput_2_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -568,18 +568,7 @@ public class job1 implements TalendJob {
 
 		status = "failure";
 
-		tDBInput_5_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tDBRow_3_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tDBRow_3_onSubJobError(exception, errorComponent, globalMap);
+		tDBInput_6_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tDBConnection_1_onSubJobError(Exception exception,
@@ -604,18 +593,7 @@ public class job1 implements TalendJob {
 
 	}
 
-	public void tDBInput_5_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tDBRow_3_onSubJobError(Exception exception,
+	public void tDBInput_6_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -890,9 +868,9 @@ public class job1 implements TalendJob {
 				end_Hash.put("tDBConnection_2", System.currentTimeMillis());
 
 				if (execStat) {
-					runStat.updateStatOnConnection("OnComponentOk10", 0, "ok");
+					runStat.updateStatOnConnection("OnComponentOk12", 0, "ok");
 				}
-				tDBInput_5Process(globalMap);
+				tDBInput_6Process(globalMap);
 
 				/**
 				 * [tDBConnection_2 end ] stop
@@ -934,27 +912,21 @@ public class job1 implements TalendJob {
 		globalMap.put("tDBConnection_2_SUBPROCESS_STATE", 1);
 	}
 
-	public static class row6Struct implements
-			routines.system.IPersistableRow<row6Struct> {
+	public static class row7Struct implements
+			routines.system.IPersistableRow<row7Struct> {
 		final static byte[] commonByteArrayLock_EDW_ETL_ADITYA_job1 = new byte[0];
 		static byte[] commonByteArray_EDW_ETL_ADITYA_job1 = new byte[0];
 
-		public Long product_id;
+		public Long order_id;
 
-		public Long getProduct_id() {
-			return this.product_id;
+		public Long getOrder_id() {
+			return this.order_id;
 		}
 
-		public String product_type;
+		public String authorize;
 
-		public String getProduct_type() {
-			return this.product_type;
-		}
-
-		public Integer is_clearance_product;
-
-		public Integer getIs_clearance_product() {
-			return this.is_clearance_product;
+		public String getAuthorize() {
+			return this.authorize;
 		}
 
 		private String readString(ObjectInputStream dis) throws IOException {
@@ -990,28 +962,6 @@ public class job1 implements TalendJob {
 			}
 		}
 
-		private Integer readInteger(ObjectInputStream dis) throws IOException {
-			Integer intReturn;
-			int length = 0;
-			length = dis.readByte();
-			if (length == -1) {
-				intReturn = null;
-			} else {
-				intReturn = dis.readInt();
-			}
-			return intReturn;
-		}
-
-		private void writeInteger(Integer intNum, ObjectOutputStream dos)
-				throws IOException {
-			if (intNum == null) {
-				dos.writeByte(-1);
-			} else {
-				dos.writeByte(0);
-				dos.writeInt(intNum);
-			}
-		}
-
 		public void readData(ObjectInputStream dis) {
 
 			synchronized (commonByteArrayLock_EDW_ETL_ADITYA_job1) {
@@ -1022,14 +972,12 @@ public class job1 implements TalendJob {
 
 					length = dis.readByte();
 					if (length == -1) {
-						this.product_id = null;
+						this.order_id = null;
 					} else {
-						this.product_id = dis.readLong();
+						this.order_id = dis.readLong();
 					}
 
-					this.product_type = readString(dis);
-
-					this.is_clearance_product = readInteger(dis);
+					this.authorize = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1045,20 +993,16 @@ public class job1 implements TalendJob {
 
 				// Long
 
-				if (this.product_id == null) {
+				if (this.order_id == null) {
 					dos.writeByte(-1);
 				} else {
 					dos.writeByte(0);
-					dos.writeLong(this.product_id);
+					dos.writeLong(this.order_id);
 				}
 
 				// String
 
-				writeString(this.product_type, dos);
-
-				// Integer
-
-				writeInteger(this.is_clearance_product, dos);
+				writeString(this.authorize, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -1071,10 +1015,8 @@ public class job1 implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("product_id=" + String.valueOf(product_id));
-			sb.append(",product_type=" + product_type);
-			sb.append(",is_clearance_product="
-					+ String.valueOf(is_clearance_product));
+			sb.append("order_id=" + String.valueOf(order_id));
+			sb.append(",authorize=" + authorize);
 			sb.append("]");
 
 			return sb.toString();
@@ -1083,7 +1025,7 @@ public class job1 implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(row6Struct other) {
+		public int compareTo(row7Struct other) {
 
 			int returnValue = -1;
 
@@ -1114,9 +1056,9 @@ public class job1 implements TalendJob {
 
 	}
 
-	public void tDBInput_5Process(final java.util.Map<String, Object> globalMap)
+	public void tDBInput_6Process(final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tDBInput_5_SUBPROCESS_STATE", 0);
+		globalMap.put("tDBInput_6_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
 
@@ -1136,70 +1078,70 @@ public class job1 implements TalendJob {
 			if (resumeIt || globalResumeTicket) { // start the resume
 				globalResumeTicket = true;
 
-				row6Struct row6 = new row6Struct();
+				row7Struct row7 = new row7Struct();
 
 				/**
-				 * [tDBOutput_5 begin ] start
+				 * [tDBOutput_2 begin ] start
 				 */
 
-				ok_Hash.put("tDBOutput_5", false);
-				start_Hash.put("tDBOutput_5", System.currentTimeMillis());
+				ok_Hash.put("tDBOutput_2", false);
+				start_Hash.put("tDBOutput_2", System.currentTimeMillis());
 
-				currentComponent = "tDBOutput_5";
+				currentComponent = "tDBOutput_2";
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null) {
 
-						runStat.updateStatOnConnection("row6" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row7" + iterateId, 0, 0);
 
 					}
 				}
 
-				int tos_count_tDBOutput_5 = 0;
+				int tos_count_tDBOutput_2 = 0;
 
-				String dbschema_tDBOutput_5 = null;
-				dbschema_tDBOutput_5 = (String) globalMap.get("schema_"
+				String dbschema_tDBOutput_2 = null;
+				dbschema_tDBOutput_2 = (String) globalMap.get("schema_"
 						+ "tDBConnection_2");
 
-				String tableName_tDBOutput_5 = "clearance_product";
-				String schemaForSearch_tDBOutput_5 = null;
-				String tableForSearch_tDBOutput_5 = tableName_tDBOutput_5;
-				if (dbschema_tDBOutput_5 != null
-						&& dbschema_tDBOutput_5.trim().length() > 0) {
-					tableName_tDBOutput_5 = dbschema_tDBOutput_5 + "\".\""
-							+ tableName_tDBOutput_5;
+				String tableName_tDBOutput_2 = "capture_response_20200226";
+				String schemaForSearch_tDBOutput_2 = null;
+				String tableForSearch_tDBOutput_2 = tableName_tDBOutput_2;
+				if (dbschema_tDBOutput_2 != null
+						&& dbschema_tDBOutput_2.trim().length() > 0) {
+					tableName_tDBOutput_2 = dbschema_tDBOutput_2 + "\".\""
+							+ tableName_tDBOutput_2;
 				}
 
-				schemaForSearch_tDBOutput_5 = dbschema_tDBOutput_5;
+				schemaForSearch_tDBOutput_2 = dbschema_tDBOutput_2;
 
-				int nb_line_tDBOutput_5 = 0;
-				int nb_line_update_tDBOutput_5 = 0;
-				int nb_line_inserted_tDBOutput_5 = 0;
-				int nb_line_deleted_tDBOutput_5 = 0;
-				int nb_line_rejected_tDBOutput_5 = 0;
+				int nb_line_tDBOutput_2 = 0;
+				int nb_line_update_tDBOutput_2 = 0;
+				int nb_line_inserted_tDBOutput_2 = 0;
+				int nb_line_deleted_tDBOutput_2 = 0;
+				int nb_line_rejected_tDBOutput_2 = 0;
 
-				int deletedCount_tDBOutput_5 = 0;
-				int updatedCount_tDBOutput_5 = 0;
-				int insertedCount_tDBOutput_5 = 0;
-				int rejectedCount_tDBOutput_5 = 0;
+				int deletedCount_tDBOutput_2 = 0;
+				int updatedCount_tDBOutput_2 = 0;
+				int insertedCount_tDBOutput_2 = 0;
+				int rejectedCount_tDBOutput_2 = 0;
 
-				java.util.Calendar calendar_tDBOutput_5 = java.util.Calendar
+				java.util.Calendar calendar_tDBOutput_2 = java.util.Calendar
 						.getInstance();
-				calendar_tDBOutput_5.set(1, 0, 1, 0, 0, 0);
-				long year1_tDBOutput_5 = calendar_tDBOutput_5.getTime()
+				calendar_tDBOutput_2.set(1, 0, 1, 0, 0, 0);
+				long year1_tDBOutput_2 = calendar_tDBOutput_2.getTime()
 						.getTime();
-				calendar_tDBOutput_5.set(10000, 0, 1, 0, 0, 0);
-				long year10000_tDBOutput_5 = calendar_tDBOutput_5.getTime()
+				calendar_tDBOutput_2.set(10000, 0, 1, 0, 0, 0);
+				long year10000_tDBOutput_2 = calendar_tDBOutput_2.getTime()
 						.getTime();
-				long date_tDBOutput_5;
+				long date_tDBOutput_2;
 
-				boolean whetherReject_tDBOutput_5 = false;
+				boolean whetherReject_tDBOutput_2 = false;
 
-				java.sql.Connection conn_tDBOutput_5 = null;
-				conn_tDBOutput_5 = (java.sql.Connection) globalMap
+				java.sql.Connection conn_tDBOutput_2 = null;
+				conn_tDBOutput_2 = (java.sql.Connection) globalMap
 						.get("conn_tDBConnection_2");
 
-				class Util_tDBOutput_5 {
+				class Util_tDBOutput_2 {
 
 					int correctNumPerInsert(String source, int numPerInsert) {
 						if (source == null) {
@@ -1231,438 +1173,385 @@ public class job1 implements TalendJob {
 
 				}
 
-				final Util_tDBOutput_5 util_tDBOutput_5 = new Util_tDBOutput_5();
-				int numPerInsert_tDBOutput_5 = 100;
-				int count_tDBOutput_5 = 0;
+				final Util_tDBOutput_2 util_tDBOutput_2 = new Util_tDBOutput_2();
+				int numPerInsert_tDBOutput_2 = 100;
+				int count_tDBOutput_2 = 0;
 
-				java.sql.DatabaseMetaData dbMetaData_tDBOutput_5 = conn_tDBOutput_5
+				java.sql.DatabaseMetaData dbMetaData_tDBOutput_2 = conn_tDBOutput_2
 						.getMetaData();
-				boolean whetherExist_tDBOutput_5 = false;
-				try (java.sql.ResultSet rsTable_tDBOutput_5 = dbMetaData_tDBOutput_5
-						.getTables(null, schemaForSearch_tDBOutput_5, null,
+				boolean whetherExist_tDBOutput_2 = false;
+				try (java.sql.ResultSet rsTable_tDBOutput_2 = dbMetaData_tDBOutput_2
+						.getTables(null, schemaForSearch_tDBOutput_2, null,
 								new String[] { "TABLE" })) {
-					while (rsTable_tDBOutput_5.next()) {
-						if (rsTable_tDBOutput_5.getString("TABLE_NAME")
-								.equalsIgnoreCase(tableForSearch_tDBOutput_5)) {
-							whetherExist_tDBOutput_5 = true;
+					while (rsTable_tDBOutput_2.next()) {
+						if (rsTable_tDBOutput_2.getString("TABLE_NAME")
+								.equalsIgnoreCase(tableForSearch_tDBOutput_2)) {
+							whetherExist_tDBOutput_2 = true;
 							break;
 						}
 					}
 				}
 
-				if (whetherExist_tDBOutput_5) {
-					try (java.sql.Statement stmtDrop_tDBOutput_5 = conn_tDBOutput_5
+				if (whetherExist_tDBOutput_2) {
+					try (java.sql.Statement stmtDrop_tDBOutput_2 = conn_tDBOutput_2
 							.createStatement()) {
-						stmtDrop_tDBOutput_5.execute("DROP TABLE \""
-								+ tableName_tDBOutput_5 + "\"");
+						stmtDrop_tDBOutput_2.execute("DROP TABLE \""
+								+ tableName_tDBOutput_2 + "\"");
 					}
 				}
-				try (java.sql.Statement stmtCreate_tDBOutput_5 = conn_tDBOutput_5
+				try (java.sql.Statement stmtCreate_tDBOutput_2 = conn_tDBOutput_2
 						.createStatement()) {
-					stmtCreate_tDBOutput_5
+					stmtCreate_tDBOutput_2
 							.execute("CREATE TABLE \""
-									+ tableName_tDBOutput_5
-									+ "\"(\"product_id\" BIGINT ,\"product_type\" VARCHAR ,\"is_clearance_product\" INT )");
+									+ tableName_tDBOutput_2
+									+ "\"(\"order_id\" BIGINT ,\"authorize\" VARCHAR )");
 				}
-				int rowCounttDBOutput_5 = 0;
-				class BufferLine_tDBOutput_5 {
-					Long product_id;
+				int rowCounttDBOutput_2 = 0;
+				class BufferLine_tDBOutput_2 {
+					Long order_id;
 
-					public BufferLine_tDBOutput_5 c0(Long product_id) {
-						this.product_id = product_id;
+					public BufferLine_tDBOutput_2 c0(Long order_id) {
+						this.order_id = order_id;
 						return this;
 					}
 
-					String product_type;
+					String authorize;
 
-					public BufferLine_tDBOutput_5 c1(String product_type) {
-						this.product_type = product_type;
-						return this;
-					}
-
-					Integer is_clearance_product;
-
-					public BufferLine_tDBOutput_5 c2(
-							Integer is_clearance_product) {
-						this.is_clearance_product = is_clearance_product;
+					public BufferLine_tDBOutput_2 c1(String authorize) {
+						this.authorize = authorize;
 						return this;
 					}
 				}
 
-				java.util.List<BufferLine_tDBOutput_5> exInsertColValueListtDBOutput_5 = new java.util.ArrayList();
-				BufferLine_tDBOutput_5 exInsertColValuetDBOutput_5 = null;
+				java.util.List<BufferLine_tDBOutput_2> exInsertColValueListtDBOutput_2 = new java.util.ArrayList();
+				BufferLine_tDBOutput_2 exInsertColValuetDBOutput_2 = null;
 
-				String valueList_tDBOutput_5 = "(?,?,?)";
-				numPerInsert_tDBOutput_5 = util_tDBOutput_5
-						.correctNumPerInsert(valueList_tDBOutput_5,
-								numPerInsert_tDBOutput_5);
+				String valueList_tDBOutput_2 = "(?,?)";
+				numPerInsert_tDBOutput_2 = util_tDBOutput_2
+						.correctNumPerInsert(valueList_tDBOutput_2,
+								numPerInsert_tDBOutput_2);
 
-				StringBuilder extendInsertValueStmt_tDBOutput_5 = new StringBuilder();
-				for (int i_tDBOutput_5 = 0; i_tDBOutput_5 < numPerInsert_tDBOutput_5; i_tDBOutput_5++) {
-					extendInsertValueStmt_tDBOutput_5
-							.append(valueList_tDBOutput_5);
-					if (i_tDBOutput_5 != numPerInsert_tDBOutput_5 - 1)
-						extendInsertValueStmt_tDBOutput_5.append(",");
+				StringBuilder extendInsertValueStmt_tDBOutput_2 = new StringBuilder();
+				for (int i_tDBOutput_2 = 0; i_tDBOutput_2 < numPerInsert_tDBOutput_2; i_tDBOutput_2++) {
+					extendInsertValueStmt_tDBOutput_2
+							.append(valueList_tDBOutput_2);
+					if (i_tDBOutput_2 != numPerInsert_tDBOutput_2 - 1)
+						extendInsertValueStmt_tDBOutput_2.append(",");
 				}
 
-				String insert_tDBOutput_5 = "INSERT INTO \""
-						+ tableName_tDBOutput_5
-						+ "\" (\"product_id\",\"product_type\",\"is_clearance_product\") VALUES "
-						+ extendInsertValueStmt_tDBOutput_5.toString();
-				java.sql.PreparedStatement pstmt_tDBOutput_5 = conn_tDBOutput_5
-						.prepareStatement(insert_tDBOutput_5);
-				resourceMap.put("pstmt_tDBOutput_5", pstmt_tDBOutput_5);
+				String insert_tDBOutput_2 = "INSERT INTO \""
+						+ tableName_tDBOutput_2
+						+ "\" (\"order_id\",\"authorize\") VALUES "
+						+ extendInsertValueStmt_tDBOutput_2.toString();
+				java.sql.PreparedStatement pstmt_tDBOutput_2 = conn_tDBOutput_2
+						.prepareStatement(insert_tDBOutput_2);
+				resourceMap.put("pstmt_tDBOutput_2", pstmt_tDBOutput_2);
 
 				/**
-				 * [tDBOutput_5 begin ] stop
+				 * [tDBOutput_2 begin ] stop
 				 */
 
 				/**
-				 * [tDBInput_5 begin ] start
+				 * [tDBInput_6 begin ] start
 				 */
 
-				ok_Hash.put("tDBInput_5", false);
-				start_Hash.put("tDBInput_5", System.currentTimeMillis());
+				ok_Hash.put("tDBInput_6", false);
+				start_Hash.put("tDBInput_6", System.currentTimeMillis());
 
-				currentComponent = "tDBInput_5";
+				currentComponent = "tDBInput_6";
 
-				int tos_count_tDBInput_5 = 0;
+				int tos_count_tDBInput_6 = 0;
 
-				java.util.Calendar calendar_tDBInput_5 = java.util.Calendar
+				java.util.Calendar calendar_tDBInput_6 = java.util.Calendar
 						.getInstance();
-				calendar_tDBInput_5.set(0, 0, 0, 0, 0, 0);
-				java.util.Date year0_tDBInput_5 = calendar_tDBInput_5.getTime();
-				int nb_line_tDBInput_5 = 0;
-				java.sql.Connection conn_tDBInput_5 = null;
-				conn_tDBInput_5 = (java.sql.Connection) globalMap
+				calendar_tDBInput_6.set(0, 0, 0, 0, 0, 0);
+				java.util.Date year0_tDBInput_6 = calendar_tDBInput_6.getTime();
+				int nb_line_tDBInput_6 = 0;
+				java.sql.Connection conn_tDBInput_6 = null;
+				conn_tDBInput_6 = (java.sql.Connection) globalMap
 						.get("conn_tDBConnection_1");
 
-				java.sql.Statement stmt_tDBInput_5 = conn_tDBInput_5
+				java.sql.Statement stmt_tDBInput_6 = conn_tDBInput_6
 						.createStatement();
 
-				String dbquery_tDBInput_5 = "select product_id, product_type,\n   case when product_type = 'Clearance' then '1' else '0' end is_clearance_product\nfro"
-						+ "m shopify_staging.products;";
+				String dbquery_tDBInput_6 = "select o.order_id, cr.authorization authorize\nfrom shopify_staging.orders o\njoin mw_integration.capture_response cr\non "
+						+ "o.order_id = cr.order_id\nwhere date(cr.created_at) >= 20200101\norder by cr.created_at desc;";
 
-				globalMap.put("tDBInput_5_QUERY", dbquery_tDBInput_5);
-				java.sql.ResultSet rs_tDBInput_5 = null;
+				globalMap.put("tDBInput_6_QUERY", dbquery_tDBInput_6);
+				java.sql.ResultSet rs_tDBInput_6 = null;
 
 				try {
-					rs_tDBInput_5 = stmt_tDBInput_5
-							.executeQuery(dbquery_tDBInput_5);
-					java.sql.ResultSetMetaData rsmd_tDBInput_5 = rs_tDBInput_5
+					rs_tDBInput_6 = stmt_tDBInput_6
+							.executeQuery(dbquery_tDBInput_6);
+					java.sql.ResultSetMetaData rsmd_tDBInput_6 = rs_tDBInput_6
 							.getMetaData();
-					int colQtyInRs_tDBInput_5 = rsmd_tDBInput_5
+					int colQtyInRs_tDBInput_6 = rsmd_tDBInput_6
 							.getColumnCount();
 
-					String tmpContent_tDBInput_5 = null;
+					String tmpContent_tDBInput_6 = null;
 
-					while (rs_tDBInput_5.next()) {
-						nb_line_tDBInput_5++;
+					while (rs_tDBInput_6.next()) {
+						nb_line_tDBInput_6++;
 
-						if (colQtyInRs_tDBInput_5 < 1) {
-							row6.product_id = null;
+						if (colQtyInRs_tDBInput_6 < 1) {
+							row7.order_id = null;
 						} else {
 
-							if (rs_tDBInput_5.getObject(1) != null) {
-								row6.product_id = rs_tDBInput_5.getLong(1);
+							if (rs_tDBInput_6.getObject(1) != null) {
+								row7.order_id = rs_tDBInput_6.getLong(1);
 							} else {
-								row6.product_id = null;
+								row7.order_id = null;
 							}
 						}
-						if (colQtyInRs_tDBInput_5 < 2) {
-							row6.product_type = null;
+						if (colQtyInRs_tDBInput_6 < 2) {
+							row7.authorize = null;
 						} else {
 
-							row6.product_type = routines.system.JDBCUtil
-									.getString(rs_tDBInput_5, 2, false);
-						}
-						if (colQtyInRs_tDBInput_5 < 3) {
-							row6.is_clearance_product = null;
-						} else {
-
-							if (rs_tDBInput_5.getObject(3) != null) {
-								row6.is_clearance_product = rs_tDBInput_5
-										.getInt(3);
-							} else {
-								row6.is_clearance_product = null;
-							}
+							row7.authorize = routines.system.JDBCUtil
+									.getString(rs_tDBInput_6, 2, false);
 						}
 
 						/**
-						 * [tDBInput_5 begin ] stop
+						 * [tDBInput_6 begin ] stop
 						 */
 
 						/**
-						 * [tDBInput_5 main ] start
+						 * [tDBInput_6 main ] start
 						 */
 
-						currentComponent = "tDBInput_5";
+						currentComponent = "tDBInput_6";
 
-						tos_count_tDBInput_5++;
-
-						/**
-						 * [tDBInput_5 main ] stop
-						 */
+						tos_count_tDBInput_6++;
 
 						/**
-						 * [tDBInput_5 process_data_begin ] start
-						 */
-
-						currentComponent = "tDBInput_5";
-
-						/**
-						 * [tDBInput_5 process_data_begin ] stop
+						 * [tDBInput_6 main ] stop
 						 */
 
 						/**
-						 * [tDBOutput_5 main ] start
+						 * [tDBInput_6 process_data_begin ] start
 						 */
 
-						currentComponent = "tDBOutput_5";
+						currentComponent = "tDBInput_6";
 
-						// row6
-						// row6
+						/**
+						 * [tDBInput_6 process_data_begin ] stop
+						 */
+
+						/**
+						 * [tDBOutput_2 main ] start
+						 */
+
+						currentComponent = "tDBOutput_2";
+
+						// row7
+						// row7
 
 						if (execStat) {
-							runStat.updateStatOnConnection("row6" + iterateId,
+							runStat.updateStatOnConnection("row7" + iterateId,
 									1, 1);
 						}
 
-						whetherReject_tDBOutput_5 = false;
-						int countertDBOutput_5 = rowCounttDBOutput_5 * (3) + 1;
+						whetherReject_tDBOutput_2 = false;
+						int countertDBOutput_2 = rowCounttDBOutput_2 * (2) + 1;
 
-						if (row6.product_id == null) {
-							pstmt_tDBOutput_5.setNull(countertDBOutput_5,
+						if (row7.order_id == null) {
+							pstmt_tDBOutput_2.setNull(countertDBOutput_2,
 									java.sql.Types.INTEGER);
 
 						} else {
 
-							pstmt_tDBOutput_5.setLong(countertDBOutput_5,
-									row6.product_id);
+							pstmt_tDBOutput_2.setLong(countertDBOutput_2,
+									row7.order_id);
 
 						}
 
-						countertDBOutput_5++;
+						countertDBOutput_2++;
 
-						if (row6.product_type == null) {
-							pstmt_tDBOutput_5.setNull(countertDBOutput_5,
+						if (row7.authorize == null) {
+							pstmt_tDBOutput_2.setNull(countertDBOutput_2,
 									java.sql.Types.VARCHAR);
 
 						} else {
 
-							pstmt_tDBOutput_5.setString(countertDBOutput_5,
-									row6.product_type);
+							pstmt_tDBOutput_2.setString(countertDBOutput_2,
+									row7.authorize);
 
 						}
 
-						countertDBOutput_5++;
+						countertDBOutput_2++;
 
-						if (row6.is_clearance_product == null) {
-							pstmt_tDBOutput_5.setNull(countertDBOutput_5,
-									java.sql.Types.INTEGER);
+						exInsertColValuetDBOutput_2 = new BufferLine_tDBOutput_2();
+						exInsertColValuetDBOutput_2
 
-						} else {
+						.c0(row7.order_id).c1(row7.authorize);
 
-							pstmt_tDBOutput_5.setInt(countertDBOutput_5,
-									row6.is_clearance_product);
+						exInsertColValueListtDBOutput_2
+								.add(exInsertColValuetDBOutput_2);
+						rowCounttDBOutput_2++;
 
+						nb_line_tDBOutput_2++;
+
+						if (rowCounttDBOutput_2 == numPerInsert_tDBOutput_2) {
+							insertedCount_tDBOutput_2 = insertedCount_tDBOutput_2
+									+ pstmt_tDBOutput_2.executeUpdate();
+							exInsertColValueListtDBOutput_2.clear();
+							rowCounttDBOutput_2 = 0;
+							countertDBOutput_2 = 1;
 						}
 
-						countertDBOutput_5++;
-
-						exInsertColValuetDBOutput_5 = new BufferLine_tDBOutput_5();
-						exInsertColValuetDBOutput_5
-
-						.c0(row6.product_id).c1(row6.product_type)
-								.c2(row6.is_clearance_product);
-
-						exInsertColValueListtDBOutput_5
-								.add(exInsertColValuetDBOutput_5);
-						rowCounttDBOutput_5++;
-
-						nb_line_tDBOutput_5++;
-
-						if (rowCounttDBOutput_5 == numPerInsert_tDBOutput_5) {
-							insertedCount_tDBOutput_5 = insertedCount_tDBOutput_5
-									+ pstmt_tDBOutput_5.executeUpdate();
-							exInsertColValueListtDBOutput_5.clear();
-							rowCounttDBOutput_5 = 0;
-							countertDBOutput_5 = 1;
-						}
-						if (!whetherReject_tDBOutput_5) {
-						}
-
-						tos_count_tDBOutput_5++;
+						tos_count_tDBOutput_2++;
 
 						/**
-						 * [tDBOutput_5 main ] stop
+						 * [tDBOutput_2 main ] stop
 						 */
 
 						/**
-						 * [tDBOutput_5 process_data_begin ] start
+						 * [tDBOutput_2 process_data_begin ] start
 						 */
 
-						currentComponent = "tDBOutput_5";
+						currentComponent = "tDBOutput_2";
 
 						/**
-						 * [tDBOutput_5 process_data_begin ] stop
-						 */
-
-						/**
-						 * [tDBOutput_5 process_data_end ] start
-						 */
-
-						currentComponent = "tDBOutput_5";
-
-						/**
-						 * [tDBOutput_5 process_data_end ] stop
+						 * [tDBOutput_2 process_data_begin ] stop
 						 */
 
 						/**
-						 * [tDBInput_5 process_data_end ] start
+						 * [tDBOutput_2 process_data_end ] start
 						 */
 
-						currentComponent = "tDBInput_5";
+						currentComponent = "tDBOutput_2";
 
 						/**
-						 * [tDBInput_5 process_data_end ] stop
+						 * [tDBOutput_2 process_data_end ] stop
 						 */
 
 						/**
-						 * [tDBInput_5 end ] start
+						 * [tDBInput_6 process_data_end ] start
 						 */
 
-						currentComponent = "tDBInput_5";
+						currentComponent = "tDBInput_6";
+
+						/**
+						 * [tDBInput_6 process_data_end ] stop
+						 */
+
+						/**
+						 * [tDBInput_6 end ] start
+						 */
+
+						currentComponent = "tDBInput_6";
 
 					}
 				} finally {
-					if (rs_tDBInput_5 != null) {
-						rs_tDBInput_5.close();
+					if (rs_tDBInput_6 != null) {
+						rs_tDBInput_6.close();
 					}
-					if (stmt_tDBInput_5 != null) {
-						stmt_tDBInput_5.close();
+					if (stmt_tDBInput_6 != null) {
+						stmt_tDBInput_6.close();
 					}
 				}
 
-				globalMap.put("tDBInput_5_NB_LINE", nb_line_tDBInput_5);
+				globalMap.put("tDBInput_6_NB_LINE", nb_line_tDBInput_6);
 
-				ok_Hash.put("tDBInput_5", true);
-				end_Hash.put("tDBInput_5", System.currentTimeMillis());
+				ok_Hash.put("tDBInput_6", true);
+				end_Hash.put("tDBInput_6", System.currentTimeMillis());
 
 				/**
-				 * [tDBInput_5 end ] stop
+				 * [tDBInput_6 end ] stop
 				 */
 
 				/**
-				 * [tDBOutput_5 end ] start
+				 * [tDBOutput_2 end ] start
 				 */
 
-				currentComponent = "tDBOutput_5";
+				currentComponent = "tDBOutput_2";
 
-				if (rowCounttDBOutput_5 != 0) {
+				if (rowCounttDBOutput_2 != 0) {
 
-					StringBuilder extendInsertValue_tDBOutput_5 = new StringBuilder();
-					for (int i_tDBOutput_5 = 0; i_tDBOutput_5 < rowCounttDBOutput_5; i_tDBOutput_5++) {
-						extendInsertValue_tDBOutput_5.append("(?,?,?)");
-						if (i_tDBOutput_5 != rowCounttDBOutput_5 - 1)
-							extendInsertValue_tDBOutput_5.append(",");
+					StringBuilder extendInsertValue_tDBOutput_2 = new StringBuilder();
+					for (int i_tDBOutput_2 = 0; i_tDBOutput_2 < rowCounttDBOutput_2; i_tDBOutput_2++) {
+						extendInsertValue_tDBOutput_2.append("(?,?)");
+						if (i_tDBOutput_2 != rowCounttDBOutput_2 - 1)
+							extendInsertValue_tDBOutput_2.append(",");
 					}
 
-					insert_tDBOutput_5 = "INSERT INTO \""
-							+ tableName_tDBOutput_5
-							+ "\" (\"product_id\",\"product_type\",\"is_clearance_product\") VALUES "
-							+ extendInsertValue_tDBOutput_5.toString();
-					pstmt_tDBOutput_5 = conn_tDBOutput_5
-							.prepareStatement(insert_tDBOutput_5);
-					rowCounttDBOutput_5 = 0;
-					for (BufferLine_tDBOutput_5 bufferLtDBOutput_5 : exInsertColValueListtDBOutput_5) {
-						int counttDBOutput_5 = rowCounttDBOutput_5 * (3) + 1;
-						if (bufferLtDBOutput_5.product_id == null) {
-							pstmt_tDBOutput_5.setNull(counttDBOutput_5,
+					insert_tDBOutput_2 = "INSERT INTO \""
+							+ tableName_tDBOutput_2
+							+ "\" (\"order_id\",\"authorize\") VALUES "
+							+ extendInsertValue_tDBOutput_2.toString();
+					pstmt_tDBOutput_2 = conn_tDBOutput_2
+							.prepareStatement(insert_tDBOutput_2);
+					rowCounttDBOutput_2 = 0;
+					for (BufferLine_tDBOutput_2 bufferLtDBOutput_2 : exInsertColValueListtDBOutput_2) {
+						int counttDBOutput_2 = rowCounttDBOutput_2 * (2) + 1;
+						if (bufferLtDBOutput_2.order_id == null) {
+							pstmt_tDBOutput_2.setNull(counttDBOutput_2,
 									java.sql.Types.INTEGER);
 
 						} else {
 
-							pstmt_tDBOutput_5.setLong(counttDBOutput_5,
-									bufferLtDBOutput_5.product_id);
+							pstmt_tDBOutput_2.setLong(counttDBOutput_2,
+									bufferLtDBOutput_2.order_id);
 
 						}
 
-						counttDBOutput_5++;
+						counttDBOutput_2++;
 
-						if (bufferLtDBOutput_5.product_type == null) {
-							pstmt_tDBOutput_5.setNull(counttDBOutput_5,
+						if (bufferLtDBOutput_2.authorize == null) {
+							pstmt_tDBOutput_2.setNull(counttDBOutput_2,
 									java.sql.Types.VARCHAR);
 
 						} else {
 
-							pstmt_tDBOutput_5.setString(counttDBOutput_5,
-									bufferLtDBOutput_5.product_type);
+							pstmt_tDBOutput_2.setString(counttDBOutput_2,
+									bufferLtDBOutput_2.authorize);
 
 						}
 
-						counttDBOutput_5++;
+						counttDBOutput_2++;
 
-						if (bufferLtDBOutput_5.is_clearance_product == null) {
-							pstmt_tDBOutput_5.setNull(counttDBOutput_5,
-									java.sql.Types.INTEGER);
-
-						} else {
-
-							pstmt_tDBOutput_5.setInt(counttDBOutput_5,
-									bufferLtDBOutput_5.is_clearance_product);
-
-						}
-
-						counttDBOutput_5++;
-
-						rowCounttDBOutput_5++;
+						rowCounttDBOutput_2++;
 					}
-					insertedCount_tDBOutput_5 = insertedCount_tDBOutput_5
-							+ pstmt_tDBOutput_5.executeUpdate();
+					insertedCount_tDBOutput_2 = insertedCount_tDBOutput_2
+							+ pstmt_tDBOutput_2.executeUpdate();
 				}
 
-				if (pstmt_tDBOutput_5 != null) {
-					pstmt_tDBOutput_5.close();
-					resourceMap.remove("pstmt_tDBOutput_5");
+				if (pstmt_tDBOutput_2 != null) {
+					pstmt_tDBOutput_2.close();
+					resourceMap.remove("pstmt_tDBOutput_2");
 				}
-				resourceMap.put("statementClosed_tDBOutput_5", true);
-				nb_line_deleted_tDBOutput_5 = nb_line_deleted_tDBOutput_5
-						+ deletedCount_tDBOutput_5;
-				nb_line_update_tDBOutput_5 = nb_line_update_tDBOutput_5
-						+ updatedCount_tDBOutput_5;
-				nb_line_inserted_tDBOutput_5 = nb_line_inserted_tDBOutput_5
-						+ insertedCount_tDBOutput_5;
-				nb_line_rejected_tDBOutput_5 = nb_line_rejected_tDBOutput_5
-						+ rejectedCount_tDBOutput_5;
+				resourceMap.put("statementClosed_tDBOutput_2", true);
+				nb_line_deleted_tDBOutput_2 = nb_line_deleted_tDBOutput_2
+						+ deletedCount_tDBOutput_2;
+				nb_line_update_tDBOutput_2 = nb_line_update_tDBOutput_2
+						+ updatedCount_tDBOutput_2;
+				nb_line_inserted_tDBOutput_2 = nb_line_inserted_tDBOutput_2
+						+ insertedCount_tDBOutput_2;
+				nb_line_rejected_tDBOutput_2 = nb_line_rejected_tDBOutput_2
+						+ rejectedCount_tDBOutput_2;
 
-				globalMap.put("tDBOutput_5_NB_LINE", nb_line_tDBOutput_5);
-				globalMap.put("tDBOutput_5_NB_LINE_UPDATED",
-						nb_line_update_tDBOutput_5);
-				globalMap.put("tDBOutput_5_NB_LINE_INSERTED",
-						nb_line_inserted_tDBOutput_5);
-				globalMap.put("tDBOutput_5_NB_LINE_DELETED",
-						nb_line_deleted_tDBOutput_5);
-				globalMap.put("tDBOutput_5_NB_LINE_REJECTED",
-						nb_line_rejected_tDBOutput_5);
+				globalMap.put("tDBOutput_2_NB_LINE", nb_line_tDBOutput_2);
+				globalMap.put("tDBOutput_2_NB_LINE_UPDATED",
+						nb_line_update_tDBOutput_2);
+				globalMap.put("tDBOutput_2_NB_LINE_INSERTED",
+						nb_line_inserted_tDBOutput_2);
+				globalMap.put("tDBOutput_2_NB_LINE_DELETED",
+						nb_line_deleted_tDBOutput_2);
+				globalMap.put("tDBOutput_2_NB_LINE_REJECTED",
+						nb_line_rejected_tDBOutput_2);
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null
 							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row6" + iterateId, 2, 0);
+						runStat.updateStatOnConnection("row7" + iterateId, 2, 0);
 					}
 				}
 
-				ok_Hash.put("tDBOutput_5", true);
-				end_Hash.put("tDBOutput_5", System.currentTimeMillis());
-
-				if (execStat) {
-					runStat.updateStatOnConnection("OnComponentOk8", 0, "ok");
-				}
-				tDBRow_3Process(globalMap);
+				ok_Hash.put("tDBOutput_2", true);
+				end_Hash.put("tDBOutput_2", System.currentTimeMillis());
 
 				/**
-				 * [tDBOutput_5 end ] stop
+				 * [tDBOutput_2 end ] stop
 				 */
 
 			}// end the resume
@@ -1683,31 +1572,31 @@ public class job1 implements TalendJob {
 			try {
 
 				/**
-				 * [tDBInput_5 finally ] start
+				 * [tDBInput_6 finally ] start
 				 */
 
-				currentComponent = "tDBInput_5";
+				currentComponent = "tDBInput_6";
 
 				/**
-				 * [tDBInput_5 finally ] stop
+				 * [tDBInput_6 finally ] stop
 				 */
 
 				/**
-				 * [tDBOutput_5 finally ] start
+				 * [tDBOutput_2 finally ] start
 				 */
 
-				currentComponent = "tDBOutput_5";
+				currentComponent = "tDBOutput_2";
 
-				if (resourceMap.get("statementClosed_tDBOutput_5") == null) {
-					java.sql.PreparedStatement pstmtToClose_tDBOutput_5 = null;
-					if ((pstmtToClose_tDBOutput_5 = (java.sql.PreparedStatement) resourceMap
-							.remove("pstmt_tDBOutput_5")) != null) {
-						pstmtToClose_tDBOutput_5.close();
+				if (resourceMap.get("statementClosed_tDBOutput_2") == null) {
+					java.sql.PreparedStatement pstmtToClose_tDBOutput_2 = null;
+					if ((pstmtToClose_tDBOutput_2 = (java.sql.PreparedStatement) resourceMap
+							.remove("pstmt_tDBOutput_2")) != null) {
+						pstmtToClose_tDBOutput_2.close();
 					}
 				}
 
 				/**
-				 * [tDBOutput_5 finally ] stop
+				 * [tDBOutput_2 finally ] stop
 				 */
 
 			} catch (java.lang.Exception e) {
@@ -1718,163 +1607,7 @@ public class job1 implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tDBInput_5_SUBPROCESS_STATE", 1);
-	}
-
-	public void tDBRow_3Process(final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tDBRow_3_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception()
-						.getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tDBRow_3 begin ] start
-				 */
-
-				ok_Hash.put("tDBRow_3", false);
-				start_Hash.put("tDBRow_3", System.currentTimeMillis());
-
-				currentComponent = "tDBRow_3";
-
-				int tos_count_tDBRow_3 = 0;
-
-				java.sql.Connection conn_tDBRow_3 = null;
-				String query_tDBRow_3 = "";
-				boolean whetherReject_tDBRow_3 = false;
-				conn_tDBRow_3 = (java.sql.Connection) globalMap
-						.get("conn_tDBConnection_2");
-
-				resourceMap.put("conn_tDBRow_3", conn_tDBRow_3);
-				java.sql.Statement stmt_tDBRow_3 = conn_tDBRow_3
-						.createStatement();
-				resourceMap.put("stmt_tDBRow_3", stmt_tDBRow_3);
-
-				/**
-				 * [tDBRow_3 begin ] stop
-				 */
-
-				/**
-				 * [tDBRow_3 main ] start
-				 */
-
-				currentComponent = "tDBRow_3";
-
-				query_tDBRow_3 = "update public.fact_order_line_items_20200207\nset product_type = a.product_type,\nis_clearance_product = a.is_clearance_p"
-						+ "roduct\nfrom public.clearance_product a\nwhere public.fact_order_line_items_20200207.product_id = a.product_id;";
-				whetherReject_tDBRow_3 = false;
-				globalMap.put("tDBRow_3_QUERY", query_tDBRow_3);
-				try {
-					stmt_tDBRow_3.execute(query_tDBRow_3);
-
-				} catch (java.lang.Exception e) {
-					whetherReject_tDBRow_3 = true;
-
-					System.err.print(e.getMessage());
-
-				}
-
-				tos_count_tDBRow_3++;
-
-				/**
-				 * [tDBRow_3 main ] stop
-				 */
-
-				/**
-				 * [tDBRow_3 process_data_begin ] start
-				 */
-
-				currentComponent = "tDBRow_3";
-
-				/**
-				 * [tDBRow_3 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tDBRow_3 process_data_end ] start
-				 */
-
-				currentComponent = "tDBRow_3";
-
-				/**
-				 * [tDBRow_3 process_data_end ] stop
-				 */
-
-				/**
-				 * [tDBRow_3 end ] start
-				 */
-
-				currentComponent = "tDBRow_3";
-
-				stmt_tDBRow_3.close();
-				resourceMap.remove("stmt_tDBRow_3");
-				resourceMap.put("statementClosed_tDBRow_3", true);
-				resourceMap.put("finish_tDBRow_3", true);
-
-				ok_Hash.put("tDBRow_3", true);
-				end_Hash.put("tDBRow_3", System.currentTimeMillis());
-
-				/**
-				 * [tDBRow_3 end ] stop
-				 */
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tDBRow_3 finally ] start
-				 */
-
-				currentComponent = "tDBRow_3";
-
-				if (resourceMap.get("statementClosed_tDBRow_3") == null) {
-					java.sql.Statement stmtToClose_tDBRow_3 = null;
-					if ((stmtToClose_tDBRow_3 = (java.sql.Statement) resourceMap
-							.remove("stmt_tDBRow_3")) != null) {
-						stmtToClose_tDBRow_3.close();
-					}
-				}
-
-				/**
-				 * [tDBRow_3 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tDBRow_3_SUBPROCESS_STATE", 1);
+		globalMap.put("tDBInput_6_SUBPROCESS_STATE", 1);
 	}
 
 	public String resuming_logs_dir_path = null;
@@ -2442,6 +2175,6 @@ public class job1 implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 67672 characters generated by Talend Open Studio for Data Integration on the
- * 7 February, 2020 5:56:57 PM IST
+ * 60986 characters generated by Talend Open Studio for Data Integration on the
+ * 5 March, 2020 4:19:10 PM IST
  ************************************************************************************************/

@@ -15,7 +15,7 @@
   <contextParameter xmi:id="_w_0_gj64Eeq31Yi6BjqvRw" comment="" name="SendMailUsername" prompt="SendMailUsername?" promptNeeded="false" type="id_String" value=""/>
   <contextParameter xmi:id="_w_0_gz64Eeq31Yi6BjqvRw" comment="" name="SendMailPassword" prompt="SendMailPassword?" promptNeeded="false" type="id_Password" value=""/>
   <contextParameter xmi:id="_JvNqAEDgEeqt74izmvl7yA" comment="" name="SMTP_Host" prompt="SMTP_Host?" promptNeeded="false" type="id_String" value=""/>
-  <contextParameter xmi:id="_JvNqAUDgEeqt74izmvl7yA" comment="" name="SMTP_Port" prompt="SMTP_Port?" promptNeeded="false" type="id_Long" value=""/>
+  <contextParameter xmi:id="_JvNqAUDgEeqt74izmvl7yA" comment="" name="SMTP_Port" prompt="SMTP_Port?" promptNeeded="false" type="id_String" value=""/>
   <contextParameter xmi:id="_HJK8EEJlEeqRXP-4AdFQiQ" comment="" name="DS_Host" prompt="DS_Host?" promptNeeded="false" type="id_String" value=""/>
   <contextParameter xmi:id="_HJLjIEJlEeqRXP-4AdFQiQ" comment="" name="DS_Port" prompt="DS_Port?" promptNeeded="false" type="id_Long" value=""/>
   <contextParameter xmi:id="_HJLjIUJlEeqRXP-4AdFQiQ" comment="" name="DS_Database" prompt="DS_Database?" promptNeeded="false" type="id_String" value=""/>
